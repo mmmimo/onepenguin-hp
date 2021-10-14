@@ -1,0 +1,27 @@
+@use "../global";
+@use "reset";
+
+header {
+  width: 100vw;
+  height: 7vw;
+  display: flex;
+}
+
+.header-left {
+  width: 20vw;
+  height: 3vw;
+}
+
+.header-center {
+  ul {
+    display: flex;
+  }
+  li {
+    display: block;
+  }
+}
+.header-right {
+  width: 30vw;
+  height: 5vw;
+  right: 0;
+}

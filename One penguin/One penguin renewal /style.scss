@@ -1,0 +1,25 @@
+@use "global" as g;
+@use "parts";
+
+// ーーーーーーーーーーーーーーーーーーーー
+// これはテスト用
+// ーーーーーーーーーーーーーーーーーーーー
+h1 {
+    color: violet;
+    font-size: 300px;
+    @include g.desktop {
+        color: hotpink;
+        font-size: 180px;
+    }
+    @include g.tab {
+        color: blue;
+    }
+    @include g.sp {
+        color: green;
+        font-size: 10px;
+    }
+}
+
+// ーーーーーーーーーーーーーーーーーーーー
+// ↑↑↑↑↑↑↑↑↑↑↑↑↑↑これはテスト用↑↑↑↑↑↑
+// ーーーーーーーーーーーーーーーーーーーー
