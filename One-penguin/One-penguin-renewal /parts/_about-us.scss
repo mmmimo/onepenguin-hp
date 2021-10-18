@@ -1,0 +1,39 @@
+@use "../global";
+@use "reset";
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.main-vis-wrapper {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  display: flex;
+  position: relative;
+}
+
+.about-one-pen-vis {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  text-align: center;
+  display: block;
+}
+
+.share {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  float: right;
+  display: block;
+  right: 50%;
+}
+
+.share-icon {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  height: auto;
+  position: relative;
+}

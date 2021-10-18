@@ -1,5 +1,6 @@
 @charset "UTF-8";
 * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   min-height: 0vw;
   white-space: nowrap;
@@ -7,7 +8,9 @@
 
 html {
   overflow-y: scroll;
+  -ms-touch-action: manipulation;
   touch-action: manipulation;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   height: 100%;
 }
@@ -63,6 +66,8 @@ body ul {
 header {
   width: 100vw;
   height: 7vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -72,6 +77,8 @@ header {
 }
 
 .header-center ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .header-center li {
@@ -84,10 +91,42 @@ header {
   right: 0;
 }
 
+.header-left-2 {
+  width: auto;
+}
+
 .info-main {
   width: 100vw;
   height: 10vw;
   color: blueviolet;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.main-vis-wrapper {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.about-one-pen-vis {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  text-align: center;
+}
+
+.share {
+  width: 100%;
+  height: auto;
+  position: absolute;
 }
 
 h1 {
@@ -109,6 +148,7 @@ h1 {
   h1 {
     color: green;
     font-size: 10px;
+    background-color: bisque;
   }
 }
 /*# sourceMappingURL=style.css.map */
