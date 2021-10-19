@@ -105,28 +105,88 @@ header {
   width: 100%;
   height: 100%;
 }
-
-.main-vis-wrapper {
+.container .about-main-vis {
+  display: block;
+  height: 500px;
+}
+.container .about-main-vis .main-vis-wrapper {
   width: 100%;
-  height: auto;
+  height: 100%;
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   position: relative;
+  margin-bottom: 20px;
 }
-
-.about-one-pen-vis {
+.container .about-main-vis .main-vis-wrapper .about-one-pen-vis {
   width: 100%;
-  height: auto;
+  height: 453px;
   position: absolute;
   text-align: center;
+  display: block;
 }
-
-.share {
+.container .about-main-vis .main-vis-wrapper .share {
   width: 100%;
+  height: 453px;
+  position: absolute;
+  float: right;
+  display: block;
+  right: 50%;
+}
+.container .about-main-vis .main-vis-wrapper .share img {
+  width: auto;
   height: auto;
   position: absolute;
+  float: right;
+  display: block;
+  right: 10%;
+}
+.container .about-main-vis .main-vis-wrapper .share .share-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: auto;
+  height: auto;
+  position: relative;
+  width: 100%;
+  height: auto;
+  z-index: 10;
+}
+.container .about-main-vis .main-vis-wrapper .share .share-icon img {
+  position: absolute;
+}
+.container .about-main-vis .about-one-pen-text {
+  width: 100%;
+  height: 400px;
+  display: block;
+  text-align: center;
+}
+.container .about-main-vis .about-one-pen-text img {
+  width: 100%;
+  height: auto;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.container .about-concept {
+  height: 434px;
+  width: 100%;
+  margin-top: 400px;
+}
+.container .about-concept .concept-img {
+  width: 100%;
+  height: auto;
+}
+.container .about-concept .concept-img img {
+  width: 100%;
+  height: 483px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 h1 {
