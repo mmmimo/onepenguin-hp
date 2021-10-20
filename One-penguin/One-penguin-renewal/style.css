@@ -21,7 +21,7 @@ body {
   *font: x-small;
   background: #fff;
   color: #3e3b3a;
-  font-family: "Hiragino Sans", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Verdana, sans-serif;
+  font-family: "Hiragino Sans", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo, Verdana, sans-serif", " 筑紫A丸ゴシック Std";
   -webkit-text-size-adjust: 100%;
   font-size: 16px;
   height: 100%;
