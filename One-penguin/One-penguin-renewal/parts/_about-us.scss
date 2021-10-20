@@ -13,7 +13,7 @@
   text-align: center;
   display: flex;
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 200px;
 
 
 .about-one-pen-vis {
@@ -59,8 +59,10 @@
 }
 }
 
+.one-pen-text-wrapper {
+
   .about-one-pen-text {
-    width: 100%;
+    width: 50%;
     height: 100%;
     display: block;
     text-align: center;
@@ -73,8 +75,9 @@
     object-fit: cover;
     }
   }
-
- } // ________________section_________________
+ } 
+}
+ // ________________section_________________
 .about-concept {
 height: 100%;
 width: 100%;
