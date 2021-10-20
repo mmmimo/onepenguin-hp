@@ -1,0 +1,16 @@
+@mixin desktop {
+    @media (max-width: 1000px) {
+        @content;
+    }
+}
+
+@mixin tab {
+    @media (max-width: 794px) {
+        @content;
+    }
+}
+@mixin sp {
+    @media (max-width: 500px) {
+        @content;
+    }
+}
