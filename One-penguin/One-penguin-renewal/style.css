@@ -266,6 +266,10 @@ header {
   height: auto;
   z-index: 10;
 }
+.container .about-contact-us-contents .about-contact-pen {
+  width: 50%;
+  height: auto;
+}
 .container .sub-footer {
   width: 100%;
   height: auto;
@@ -273,5 +277,6 @@ header {
 .container .sub-footer img {
   width: 100%;
   height: auto;
+  margin-top: 200px;
 }
 /*# sourceMappingURL=style.css.map */
