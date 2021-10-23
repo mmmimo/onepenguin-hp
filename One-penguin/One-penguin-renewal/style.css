@@ -279,27 +279,4 @@ header {
   height: auto;
   margin-top: 200px;
 }
-
-h1 {
-  color: violet;
-  font-size: 300px;
-}
-@media (max-width: 1000px) {
-  h1 {
-    color: hotpink;
-    font-size: 180px;
-  }
-}
-@media (max-width: 794px) {
-  h1 {
-    color: blue;
-  }
-}
-@media (max-width: 500px) {
-  h1 {
-    color: green;
-    font-size: 10px;
-    background-color: bisque;
-  }
-}
 /*# sourceMappingURL=style.css.map */
