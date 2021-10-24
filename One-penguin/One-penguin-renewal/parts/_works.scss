@@ -58,10 +58,14 @@
       font-style: normal;
       font-weight: 700;
     }
-    .back {
+    .right_back {
       position: absolute;
-      right: 0;
+      right: -5%;
       top: 50%;
+      width: 14vw;
+      height: 14vw;
+
+      object-fit: contain;
     }
   }
   .nami {
@@ -115,9 +119,9 @@
   }
   .right_back {
     position: absolute;
-    right: -1%;
-    width: 10vw;
-    height: 10vw;
+    right: -5%;
+    width: 15vw;
+    height: 15vw;
     object-fit: contain;
   }
   .w_p {
@@ -151,7 +155,8 @@
     z-index: 10;
     width: 50%;
     height: 50vw;
-    background-color: blue;
+    padding: 0.5%;
+    background-color: white;
     display: flex;
     justify-content: space-evenly;
     top: 15%;
@@ -161,11 +166,10 @@
 
     .box {
       width: 33%;
-      height: 40vw;
+      height: 50vw;
     }
     .plan {
-      margin-top: 3%;
-      width: 98%;
+      width: 100%;
       height: auto;
       object-fit: contain;
     }

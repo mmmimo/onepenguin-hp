@@ -27,7 +27,6 @@ body {
   height: 100%;
   margin: 0;
   overflow-x: hidden;
-  max-width: 1920px;
 }
 body a,
 body a:visited,
@@ -342,10 +341,14 @@ header {
   font-style: normal;
   font-weight: 700;
 }
-.w_main .w_main_under .back {
+.w_main .w_main_under .right_back {
   position: absolute;
-  right: 0;
+  right: -5%;
   top: 50%;
+  width: 14vw;
+  height: 14vw;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .w_main .nami {
   width: 100%;
@@ -403,9 +406,9 @@ header {
 }
 .w_works .right_back {
   position: absolute;
-  right: -1%;
-  width: 10vw;
-  height: 10vw;
+  right: -5%;
+  width: 15vw;
+  height: 15vw;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -442,7 +445,8 @@ header {
   z-index: 10;
   width: 50%;
   height: 50vw;
-  background-color: blue;
+  padding: 0.5%;
+  background-color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -456,11 +460,10 @@ header {
 }
 .w_price .w_price_wrapper .box {
   width: 33%;
-  height: 40vw;
+  height: 50vw;
 }
 .w_price .w_price_wrapper .plan {
-  margin-top: 3%;
-  width: 98%;
+  width: 100%;
   height: auto;
   -o-object-fit: contain;
      object-fit: contain;
