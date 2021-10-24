@@ -279,4 +279,123 @@ header {
   height: auto;
   margin-top: 200px;
 }
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.w_main {
+  width: 100%;
+  height: 75vw;
+}
+.w_main .w_main_top {
+  background-color: #f0f0f0;
+  width: 100%;
+  height: 30vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+.w_main .w_main_top .penguin {
+  position: absolute;
+  bottom: -30%;
+  left: 5%;
+  height: 20vw;
+  width: 18vw;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.w_main .w_main_top .right {
+  width: 35vw;
+  height: 20vw;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin: 0 auto;
+}
+.w_main h1 {
+  font-size: 2vw;
+  color: #050037;
+  font-family: fot-tsukuardgothic-std, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  margin-top: 4vw;
+  margin-left: 9vw;
+}
+.w_main .w_main_under {
+  text-align: center;
+  position: relative;
+  height: 33vw;
+  width: 100%;
+}
+.w_main .w_main_under .policy {
+  width: 30vw;
+  height: 20vw;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.w_main .w_main_under h2 {
+  margin-top: 3vw;
+  color: #050037;
+  font-family: fot-tsukuardgothic-std, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+.w_main .w_main_under .back {
+  position: absolute;
+  right: 0;
+  top: 50%;
+}
+.w_main .nami {
+  width: 100%;
+  height: 10vw;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.w_works {
+  width: 100%;
+  height: 100vw;
+  position: relative;
+}
+.w_works .back {
+  position: absolute;
+  left: -1%;
+}
+.w_works .w_works_title {
+  text-align: center;
+}
+.w_works .w_works_title .title {
+  width: 13vw;
+  height: 13vw;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.w_works .ex_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 60vw;
+  height: 30vw;
+  margin: 0 auto;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  /* 横並びに表示する */
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.w_works .ex_wrapper .img {
+  margin: 0 auto;
+  display: block;
+  width: 20vw;
+  height: 18vw;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.w_works .ex_wrapper .w_works_ex {
+  text-align: center;
+  width: 30%;
+  height: 10vw;
+}
 /*# sourceMappingURL=style.css.map */
