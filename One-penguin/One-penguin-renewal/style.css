@@ -286,23 +286,35 @@ header {
 
 .w_main {
   width: 100%;
-  height: 75vw;
+  height: 66vw;
 }
 .w_main .w_main_top {
   background-color: #f0f0f0;
   width: 100%;
-  height: 30vw;
+  height: 26vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   position: relative;
 }
+@media (max-width: 794px) {
+  .w_main .w_main_top {
+    background-color: red;
+  }
+}
+@media (max-width: 500px) {
+  .w_main .w_main_top {
+    color: green;
+    font-size: 10px;
+    background-color: bisque;
+  }
+}
 .w_main .w_main_top .penguin {
   position: absolute;
   bottom: -30%;
   left: 5%;
-  height: 20vw;
-  width: 18vw;
+  height: 17vw;
+  width: 29vw;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -312,6 +324,7 @@ header {
   -o-object-fit: contain;
      object-fit: contain;
   margin: 0 auto;
+  margin-top: 3vw;
 }
 .w_main h1 {
   font-size: 2vw;
@@ -320,12 +333,14 @@ header {
   font-style: normal;
   font-weight: 700;
   margin-top: 4vw;
-  margin-left: 9vw;
+  margin-left: 20vw;
+  line-height: 4vw;
+  letter-spacing: 0.2vw;
 }
 .w_main .w_main_under {
   text-align: center;
   position: relative;
-  height: 33vw;
+  height: 28.5vw;
   width: 100%;
 }
 .w_main .w_main_under .policy {
@@ -333,13 +348,16 @@ header {
   height: 20vw;
   -o-object-fit: contain;
      object-fit: contain;
+  margin-top: -2%;
 }
 .w_main .w_main_under h2 {
-  margin-top: 3vw;
+  margin-top: -3%;
+  font-size: 1.35vw;
   color: #050037;
   font-family: fot-tsukuardgothic-std, sans-serif;
   font-style: normal;
   font-weight: 700;
+  line-height: 2.7vw;
 }
 .w_main .w_main_under .right_back {
   position: absolute;
@@ -359,7 +377,7 @@ header {
 
 .w_works {
   width: 100%;
-  height: 73vw;
+  height: 89vw;
   position: relative;
 }
 .w_works .back {
@@ -370,8 +388,8 @@ header {
   text-align: center;
 }
 .w_works .w_works_title .title {
-  width: 13vw;
-  height: 13vw;
+  width: 11vw;
+  height: 11vw;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -379,8 +397,8 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 60vw;
-  height: 36vw;
+  width: 68vw;
+  height: 52vw;
   margin: 0 auto;
   -ms-flex-pack: distribute;
       justify-content: space-around;
@@ -398,11 +416,30 @@ header {
 }
 .w_works .ex_wrapper .w_works_ex {
   text-align: center;
-  width: 30%;
+  width: 33%;
   height: 18vw;
+  font-size: 0.6vw;
+}
+.w_works .ex_wrapper .w_works_ex img {
+  width: 15vw;
+  height: 15vw;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.w_works .ex_wrapper .w_works_ex .ex_url {
+  font-weight: bold;
 }
 .w_works .more_btn {
   text-align: center;
+}
+.w_works .more_btn .w_btn {
+  width: 12vw;
+  height: 3vw;
+  border-radius: 100vh;
+  background-color: white;
+  border: 3px solid #00114c;
+  color: #050037;
+  font-weight: bold;
 }
 .w_works .right_back {
   position: absolute;
@@ -415,8 +452,8 @@ header {
 .w_works .w_p {
   position: absolute;
   left: 25%;
-  width: 13vw;
-  height: 15vw;
+  width: 16vw;
+  height: 16vw;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -430,12 +467,12 @@ header {
 .w_price .w_price_title {
   text-align: center;
   width: 100%;
-  height: 22vw;
+  height: 33vw;
   background-color: #f0f0f0;
 }
 .w_price .w_price_title img {
-  width: 8vw;
-  height: 8vw;
+  width: 10vw;
+  height: 10vw;
   -o-object-fit: contain;
      object-fit: contain;
   margin-top: 2vw;
@@ -445,7 +482,8 @@ header {
   z-index: 10;
   width: 50%;
   height: 50vw;
-  padding: 0.5%;
+  padding: 1%;
+  padding-top: 2%;
   background-color: white;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -459,7 +497,7 @@ header {
   margin: auto;
 }
 .w_price .w_price_wrapper .box {
-  width: 33%;
+  width: 31%;
   height: 50vw;
 }
 .w_price .w_price_wrapper .plan {
@@ -475,13 +513,17 @@ header {
 }
 .w_price .w_contact_wrapper {
   width: 100%;
-  height: 60vw;
+  height: 53vw;
   position: relative;
 }
 .w_price .w_contact_wrapper .pcs {
   position: absolute;
-  right: 18%;
+  right: 10%;
   bottom: 0;
+  width: 36vw;
+  height: 22vw;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .w_contact {
@@ -498,43 +540,54 @@ header {
   height: 25vw;
 }
 .w_contact .w_contact_text {
-  width: 48%;
-  height: 20vw;
-  margin: 5vw auto;
+  width: 58%;
+  margin: 0 auto;
+  margin-top: 12vw;
 }
 .w_contact .w_title {
   font-size: 1.5vw;
+  margin: 0.4vw 0;
 }
 .w_contact .w_sub_title {
   font-size: 1vw;
+  margin: 0.4vw 0;
 }
 .w_contact .w_long {
   position: absolute;
   z-index: -1;
+  width: 82vw;
+  height: 33vw;
 }
 .w_contact .long {
-  width: 75vw;
-  height: 18vw;
+  position: absolute;
+  width: 84vw;
+  height: 33vw;
   -o-object-fit: contain;
      object-fit: contain;
-  left: -10%;
+  left: -2%;
 }
 .w_contact .contact_btn {
   position: absolute;
-  width: 10vw;
-  height: 5vw;
+  width: 16vw;
+  height: 3vw;
   top: 30%;
   left: 0;
   right: 0;
   margin: auto;
 }
 .w_contact .contact_btn .w_c {
-  width: 18vw;
-  height: 3vw;
-  top: 30%;
-  left: 0;
-  right: 0;
+  width: 16vw;
+  height: 3.3vw;
+  border-radius: 1vh;
   background-color: white;
-  padding: 1vw 3vw;
+  border: 3px solid #00114c;
+  color: #050037;
+  font-weight: bold;
+  margin-top: 7vw;
+  margin-left: 0vw;
+}
+.w_contact .contact_btn .alow {
+  position: relative;
+  right: -3vw;
 }
 /*# sourceMappingURL=style.css.map */
