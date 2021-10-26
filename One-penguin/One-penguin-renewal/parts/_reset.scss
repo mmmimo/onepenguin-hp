@@ -20,13 +20,14 @@ body {
   *font: x-small;
   background: #fff;
   color: #3e3b3a;
-  font-family: "Hiragino Sans", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo, Verdana, sans-serif"," 筑紫A丸ゴシック Std";
+  font-family: "Hiragino Sans", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ",
+    "Meiryo, Verdana, sans-serif", " 筑紫A丸ゴシック Std";
   -webkit-text-size-adjust: 100%;
   font-size: 16px;
   height: 100%;
   margin: 0;
   overflow-x: hidden;
-  max-width: 1920px;
+  // max-width: 1920px;
 
   a,
   a:visited,
