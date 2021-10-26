@@ -119,6 +119,44 @@
       height: auto;
       z-index: 9;
     }
+    .fluid-big {
+      position: absolute;
+      top: 100px;
+      left: -12%;
+      width:30vh;/*横幅*/
+      height: 30vh;/*縦幅*/
+      background:blue;/*背景色*/
+      animation: fluidrotate 15s ease 0s infinite;/*アニメーションの設定*/
+      overflow-x: hidden;
+
+    }
+    .fluid-small {
+      position: absolute;
+      top: 280px;
+      right: -6%;
+      width:20vh;/*横幅*/
+      height: 10vh;/*縦幅*/
+      background:blue;/*背景色*/
+      animation: fluidrotate 15s ease 0s infinite;/*アニメーションの設定*/
+      overflow-x: hidden;
+    }
+    @keyframes fluidrotate {  
+	  
+      0%, 100% {
+          border-radius: 63% 37% 54% 46%/55% 48% 52% 45%;}
+      14% {
+          border-radius: 40% 60% 54% 46%/49% 60% 40% 51%;}
+      28% {
+          border-radius: 54% 46% 38% 62%/49% 70% 30% 51%;}
+      42% {
+          border-radius: 61% 39% 55% 45%/61% 38% 62% 39%;}
+      56% {
+          border-radius: 61% 39% 67% 33%/70% 50% 50% 30%;}
+      70% {
+          border-radius: 50% 50% 34% 66%/56% 68% 32% 44%;}
+      84% {
+          border-radius: 46% 54% 50% 50%/35% 61% 39% 65%;}
+      }
 
   }
  } 
@@ -179,11 +217,18 @@ margin-top: 801px;
     width: auto;
     height: auto;
     z-index: 10;
+    position: absolute;
+    top: 70px;
+    left: 10%;
+
   }
   .contact-button {
     width: auto;
     height: auto;
     z-index: 10;
+    position: absolute;
+    top: 70px;
+    left: 30%;
   }
   .about-contact-pen {
     width: 50%;
