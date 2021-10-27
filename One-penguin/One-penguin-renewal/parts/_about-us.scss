@@ -34,8 +34,8 @@
   }
 
   .main-vis-text {
-    left: 13%;
-    top: 60%;
+    left: 18%;
+    top: 25%;
     position:absolute;
   }
 }
@@ -48,7 +48,7 @@
   float: right;
   display: block;
   left: 95%;
-  top: 200px;
+  top: 70px;
 
   img {
     width: auto;
@@ -67,13 +67,15 @@
   width: 100%;
   z-index: 10;
   top: -7%;
+  left: -4px;
+
 
     .share-icon-twi {
-      top: 20%;
+      top: 18%;
       position: absolute;
     }
     .share-icon-fb {
-      top: 25%;
+      top: 24%;
       position: absolute;
     }
   }
@@ -83,7 +85,7 @@
 
 .one-pen-text-wrapper {
   width: 100%;
-  height: 800px;
+  height: 100%;
   text-align: center;
   position: relative;
   top: 200px;
@@ -103,11 +105,11 @@
     }
     .about-one-pen-text-box {
       position: absolute;
-      width: 50%;
+      width: 28.6%;
       height: auto;
       z-index: 10;
-      top: -50%;
-      left: 50%;
+      top: -79.7%;
+      left: 48.7%;
     transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
@@ -121,40 +123,45 @@
     }
     .fluid-big {
       position: absolute;
-      top: 100px;
-      left: -12%;
+      top: -415px;
+      left: -8%;
       width:30vh;/*横幅*/
       height: 30vh;/*縦幅*/
-      background:blue;/*背景色*/
-      animation: fluidrotate 15s ease 0s infinite;/*アニメーションの設定*/
+      background:#E9F2FA;/*背景色*/
+      animation: fluidrotate 8s ease 0s infinite;/*アニメーションの設定*/
       overflow-x: hidden;
 
     }
     .fluid-small {
       position: absolute;
-      top: 280px;
+      top: -227px;
       right: -6%;
       width:20vh;/*横幅*/
       height: 10vh;/*縦幅*/
-      background:blue;/*背景色*/
+      background:#E9F2FA;/*背景色*/
       animation: fluidrotate 15s ease 0s infinite;/*アニメーションの設定*/
       overflow-x: hidden;
+    }
+
+    .small-2 {
+      top: -207px;
+      right: -3%;
     }
     @keyframes fluidrotate {  
 	  
       0%, 100% {
-          border-radius: 63% 37% 54% 46%/55% 48% 52% 45%;}
-      14% {
-          border-radius: 40% 60% 54% 46%/49% 60% 40% 51%;}
-      28% {
+          border-radius: 62% 38% 16% 84% / 68% 54% 46% 32%;}
+      10% {
+          border-radius: 15% 85% 80% 20% / 68% 54% 46% 32%;}
+      25% {
           border-radius: 54% 46% 38% 62%/49% 70% 30% 51%;}
-      42% {
+      39% {
           border-radius: 61% 39% 55% 45%/61% 38% 62% 39%;}
       56% {
           border-radius: 61% 39% 67% 33%/70% 50% 50% 30%;}
-      70% {
+      76% {
           border-radius: 50% 50% 34% 66%/56% 68% 32% 44%;}
-      84% {
+      94% {
           border-radius: 46% 54% 50% 50%/35% 61% 39% 65%;}
       }
 
@@ -163,29 +170,39 @@
 }
  // ________________section_________________
 .about-concept {
-height: 100%;
+height: auto;
 width: 100%;
-margin-top: 801px;
+margin-top: 22.4%;
 
 .concept-img {
   width: 100%;
   height: 100%;
+  background-color: aqua;
+  text-align: center;
+
+
   img {
-    width: 100%;
+    width: 17%;
   height: 100%;
   object-fit: cover;
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: -53px;
+
   }
 }
 }
 // ________________section_________________
 .wave-mark {
-  top: 20%;
+  
+  margin-top: 20px;
 }
 
 
 .wave-mark img {
   width: 100%;
   height: auto;
+  margin-top: 50px;
 }
 // ________________section_________________
 .about-company {
@@ -195,7 +212,7 @@ margin-top: 801px;
     width: 50%;
     height: 100%;
     text-align: center;
-    margin-top: 220px;
+    margin-top: 20px;
   }
 }
 }
@@ -233,6 +250,7 @@ margin-top: 801px;
   .about-contact-pen {
     width: 50%;
     height: auto;
+    z-index: 9;
   }
 
 

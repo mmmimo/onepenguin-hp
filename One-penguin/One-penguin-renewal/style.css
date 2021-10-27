@@ -134,8 +134,8 @@ header {
   -ms-transform: translateX(-50%);
 }
 .container .about-main-vis .main-vis-wrapper .about-one-pen-vis .main-vis-text {
-  left: 13%;
-  top: 60%;
+  left: 18%;
+  top: 25%;
   position: absolute;
 }
 .container .about-main-vis .main-vis-wrapper .share {
@@ -145,7 +145,7 @@ header {
   float: right;
   display: block;
   left: 95%;
-  top: 200px;
+  top: 70px;
 }
 .container .about-main-vis .main-vis-wrapper .share img {
   width: auto;
@@ -167,18 +167,19 @@ header {
   width: 100%;
   z-index: 10;
   top: -7%;
+  left: -4px;
 }
 .container .about-main-vis .main-vis-wrapper .share .share-icon .share-icon-twi {
-  top: 20%;
+  top: 18%;
   position: absolute;
 }
 .container .about-main-vis .main-vis-wrapper .share .share-icon .share-icon-fb {
-  top: 25%;
+  top: 24%;
   position: absolute;
 }
 .container .about-main-vis .one-pen-text-wrapper {
   width: 100%;
-  height: 800px;
+  height: 100%;
   text-align: center;
   position: relative;
   top: 200px;
@@ -198,11 +199,11 @@ header {
 }
 .container .about-main-vis .one-pen-text-wrapper .about-one-pen-text .about-one-pen-text-box {
   position: absolute;
-  width: 50%;
+  width: 28.6%;
   height: auto;
   z-index: 10;
-  top: -50%;
-  left: 50%;
+  top: -79.7%;
+  left: 48.7%;
   transform: translateX(-50%);
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
@@ -215,101 +216,111 @@ header {
 }
 .container .about-main-vis .one-pen-text-wrapper .about-one-pen-text .fluid-big {
   position: absolute;
-  top: 100px;
-  left: -12%;
+  top: -415px;
+  left: -8%;
   width: 30vh;
   /*横幅*/
   height: 30vh;
   /*縦幅*/
-  background: blue;
+  background: #E9F2FA;
   /*背景色*/
-  -webkit-animation: fluidrotate 15s ease 0s infinite;
-          animation: fluidrotate 15s ease 0s infinite;
+  -webkit-animation: fluidrotate 8s ease 0s infinite;
+          animation: fluidrotate 8s ease 0s infinite;
   /*アニメーションの設定*/
   overflow-x: hidden;
 }
 .container .about-main-vis .one-pen-text-wrapper .about-one-pen-text .fluid-small {
   position: absolute;
-  top: 280px;
+  top: -227px;
   right: -6%;
   width: 20vh;
   /*横幅*/
   height: 10vh;
   /*縦幅*/
-  background: blue;
+  background: #E9F2FA;
   /*背景色*/
   -webkit-animation: fluidrotate 15s ease 0s infinite;
           animation: fluidrotate 15s ease 0s infinite;
   /*アニメーションの設定*/
   overflow-x: hidden;
 }
+.container .about-main-vis .one-pen-text-wrapper .about-one-pen-text .small-2 {
+  top: -207px;
+  right: -3%;
+}
 @-webkit-keyframes fluidrotate {
   0%, 100% {
-    border-radius: 63% 37% 54% 46%/55% 48% 52% 45%;
+    border-radius: 62% 38% 16% 84%/68% 54% 46% 32%;
   }
-  14% {
-    border-radius: 40% 60% 54% 46%/49% 60% 40% 51%;
+  10% {
+    border-radius: 15% 85% 80% 20%/68% 54% 46% 32%;
   }
-  28% {
+  25% {
     border-radius: 54% 46% 38% 62%/49% 70% 30% 51%;
   }
-  42% {
+  39% {
     border-radius: 61% 39% 55% 45%/61% 38% 62% 39%;
   }
   56% {
     border-radius: 61% 39% 67% 33%/70% 50% 50% 30%;
   }
-  70% {
+  76% {
     border-radius: 50% 50% 34% 66%/56% 68% 32% 44%;
   }
-  84% {
+  94% {
     border-radius: 46% 54% 50% 50%/35% 61% 39% 65%;
   }
 }
 @keyframes fluidrotate {
   0%, 100% {
-    border-radius: 63% 37% 54% 46%/55% 48% 52% 45%;
+    border-radius: 62% 38% 16% 84%/68% 54% 46% 32%;
   }
-  14% {
-    border-radius: 40% 60% 54% 46%/49% 60% 40% 51%;
+  10% {
+    border-radius: 15% 85% 80% 20%/68% 54% 46% 32%;
   }
-  28% {
+  25% {
     border-radius: 54% 46% 38% 62%/49% 70% 30% 51%;
   }
-  42% {
+  39% {
     border-radius: 61% 39% 55% 45%/61% 38% 62% 39%;
   }
   56% {
     border-radius: 61% 39% 67% 33%/70% 50% 50% 30%;
   }
-  70% {
+  76% {
     border-radius: 50% 50% 34% 66%/56% 68% 32% 44%;
   }
-  84% {
+  94% {
     border-radius: 46% 54% 50% 50%/35% 61% 39% 65%;
   }
 }
 .container .about-concept {
-  height: 100%;
+  height: auto;
   width: 100%;
-  margin-top: 801px;
+  margin-top: 22.4%;
 }
 .container .about-concept .concept-img {
   width: 100%;
   height: 100%;
+  background-color: aqua;
+  text-align: center;
 }
 .container .about-concept .concept-img img {
-  width: 100%;
+  width: 17%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: -53px;
 }
 .container .wave-mark {
-  top: 20%;
+  margin-top: 20px;
 }
 .container .wave-mark img {
   width: 100%;
   height: auto;
+  margin-top: 50px;
 }
 .container .about-company .company-content {
   text-align: center;
@@ -318,7 +329,7 @@ header {
   width: 50%;
   height: 100%;
   text-align: center;
-  margin-top: 220px;
+  margin-top: 20px;
 }
 .container .about-contact-us-contents {
   width: 100%;
@@ -350,6 +361,7 @@ header {
 .container .about-contact-us-contents .about-contact-pen {
   width: 50%;
   height: auto;
+  z-index: 9;
 }
 .container .sub-footer {
   width: 100%;
@@ -624,7 +636,7 @@ header {
 .w_contact .w_contact_text {
   width: 58%;
   margin: 0 auto;
-  margin-top: 12vw;
+  margin-top: 13.5vw;
 }
 .w_contact .w_title {
   font-size: 1.5vw;
