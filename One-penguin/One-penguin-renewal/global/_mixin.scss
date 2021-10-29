@@ -18,17 +18,46 @@
 
 // ______________________________________________
 
+@mixin dk {
+    @media (max-width: 1500px) {
+        @content;
+    }
+}
+
+@mixin lp {
+    @media (max-width: 1240px) {
+        @content;
+    }
+}
+
+
 @mixin ipd {
     @media (max-width: 1024px) {
         @content;
     }
 }
 
+@mixin id {
+    @media (max-width: 850px) {
+        @content;
+    }
+}
+
+
 @mixin ph {
     @media (max-width: 600px) {
         @content;
     }
 }
+
+@mixin phs {
+    @media (max-width: 400px) {
+        @content;
+    }
+}
+
+
+
 
 $breakpoints: (
   'ph': 'screen and (max-width: 600px)',  //スマホ

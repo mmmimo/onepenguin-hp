@@ -1,16 +1,10 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-</head>
+
+<?php get_header(); ?>
+
+
 <body>
     <div id="splash">
-        <div id="splash_logo"><img src="../images/1x/logo.svg" alt="" class="fadeUp"></div><!--画像部分は適宜差し換えてください-->
+        <div id="splash_logo"><img src="<?php echo get_template_directory_uri(); ?>/images/1x/logo.svg" alt="" class="fadeUp"></div><!--画像部分は適宜差し換えてください-->
         <!--/splash--></div>
        
     <div class="container" id=container>
@@ -20,14 +14,14 @@
         <div class="main-vis-wrapper">
             <div class="about-one-pen-vis">  
             
-            <!-- <img src="../images/1x/about-us-img10-3.png" 
+            <!-- <img src="<?php echo get_template_directory_uri(); ?>/images/1x/about-us-img10-3.png" 
             srcset="../images/1x/about-us-img10-3.png 1x,
             ../images/2x/about-us-img10-3@2x-8.png 2x" alt=""> -->
-            <img src="../images/1x/about-us-img1.png" 
+            <img src="<?php echo get_template_directory_uri(); ?>/images/1x/about-us-img1.png" 
             srcset="../images/1x/about-us-img1.png 1x,
             ../images/2x/about-us-img1@2x-8.png 2x" alt=""
             class="main-vis-img">
-            <img src="../images/1x/about-us-img2.png"
+            <img src="<?php echo get_template_directory_uri(); ?>/images/1x/about-us-img2.png"
             srcset="../images/1x/about-us-img2.png 1x,
             ../images/2x/about-us-img2@2x-8.png 2x" alt=""
             class="main-vis-text"> 
@@ -35,16 +29,16 @@
         </div>
 
         <div class="share">
-            <img src="../images/1x/about-us-img04.png"
+            <img src="<?php echo get_template_directory_uri(); ?>/images/1x/about-us-img04.png"
             srcset="../images/1x/about-us-img4.png 1x,
             ../images/2x/about-us-img4@2x-8.png 2x" alt="">
             <div class="share-icon">
-                <img src="../images/1x/about-us-img4-1.png" 
+                <img src="<?php echo get_template_directory_uri(); ?>/images/1x/about-us-img4-1.png" 
                 srcset="../images/1x/about-us-img4-1.png 1x,
                 ../images/2x/about-us-img4-1@2x-8.png 2x" alt=""
                 class="share-icon-twi">
     
-                <img src="../images/1x/about-us-img4-2.png" 
+                <img src="<?php echo get_template_directory_uri(); ?>/images/1x/about-us-img4-2.png" 
                srcset="../images/1x/about-us-img4-2.png 1x,
                ../images/2x/about-us-img4-2@2x-8.png 2x" alt=""
                class="share-icon-fb">
@@ -53,17 +47,17 @@
     </div>
     <div class="one-pen-text-wrapper">
         <div class="about-one-pen-text">
-            <!-- <img src="../images/1x/about-us-img5-1.png"
+            <!-- <img src="<?php echo get_template_directory_uri(); ?>/images/1x/about-us-img5-1.png"
             srcset="../images/1x/about-us-img5-1.png 1x,
             ../images/2x/about-us-img5-1@2x-8.png 2x" alt=""> 
         2枚同時表示　 -->
         <div class="about-one-pen-text-box">
-        <img src="../images/1x/about-us-img08.png"
+        <img src="<?php echo get_template_directory_uri(); ?>/images/1x/about-us-img08.png"
         srcset="../images/1x/about-us-img08.png 1x,
         ../images/2x/about-us-img08@2x-8.png 2x" alt="">
         </div>
         <div class="about-one-pen-back-img">
-        <!-- <img src="../images/1x/about-us-img04.png" 
+        <!-- <img src="<?php echo get_template_directory_uri(); ?>/images/1x/about-us-img04.png" 
         srcset="../images/1x/about-us-img04.png 1x,
         ../images/2x/about-us-img04@2x-8.png 2x" alt=""> -->
 
@@ -80,21 +74,21 @@
     <section class="about-concept">
         <div class="about-concept-wrapper">
         <div class="concept-img">
-            <img src="../images/1x/about-us-img10-2.png"
+            <img src="<?php echo get_template_directory_uri(); ?>/images/1x/about-us-img10-2.png"
             srcset="../images/1x/about-us-img10-2.png 1x,
             ../images/2x/about-us-img10-2@2x-8.png 2x" alt="">
         </div>
         </div>
     </section>
     <div class="wave-mark">
-        <img src="../images/1x/about-us-img6.png"
+        <img src="<?php echo get_template_directory_uri(); ?>/images/1x/about-us-img6.png"
         srcset="../images/1x/about-us-img6.png 1x,
         ../images/2x/about-us-img6@2x-8.png 2x" alt="">
     </div>
      <!------------------------------------------------------------------------------------------------------------- -->
     <section class="about-company">
         <div class="company-content">
-            <img src="../images/1x/about-us-img10-1.png"
+            <img src="<?php echo get_template_directory_uri(); ?>/images/1x/about-us-img10-1.png"
             srcset="../images/1x/about-us-img10-1.png 1x,
             ../images/2x/about-us-img10-1@2x-8.png 2x" alt="">
         </div>
@@ -102,17 +96,17 @@
      <!------------------------------------------------------------------------------------------------------------- -->
     <section class="about-contact-us">
         <div class="about-contact-us-contents">  <!-- バックグラウンド -->
-            <img src="../images/1x/about-us-img7-1.png"
+            <img src="<?php echo get_template_directory_uri(); ?>/images/1x/about-us-img7-1.png"
             srcset="../images/1x/about-us-img7-1.png 1x,
             ../images/2x/about-us-img7-1@2x-8.png 2x" alt=""
             class="contact-text">
 
-            <img src="../images/1x/about-us-img7-2.png"
+            <img src="<?php echo get_template_directory_uri(); ?>/images/1x/about-us-img7-2.png"
             srcset="../images/1x/about-us-img7-2.png 1x,
             ../images/2x/about-us-img7-2@2x-8.png 2x" alt=""
             class="contact-button">            
             
-            <img src="../images/1x/about-us-img11.png"
+            <img src="<?php echo get_template_directory_uri(); ?>/images/1x/about-us-img11.png"
                 srcset="../images/1x/about-us-img11.png 1x,
                 ../images/2x/about-us-img11@2x-8.png 2x" alt=""
                 class="about-contact-pen">
@@ -121,7 +115,7 @@
     </section>
      <!------------------------------------------------------------------------------------------------------------- -->
     <div class="sub-footer">
-        <img src="../images/1x/about-us-img7-3.png"
+        <img src="<?php echo get_template_directory_uri(); ?>/images/1x/about-us-img7-3.png"
         srcset="../images/1x/about-us-img7-3.png 1x,
         ../images/1x/about-us-img7-3.png 2x" alt="">
     </div>
@@ -132,4 +126,7 @@
 </body>
 
 </body>
-</html>
+
+
+
+<?php get_footer(); ?> 
