@@ -1,5 +1,53 @@
-@use "../global";
+@use "../global" as g;
 @use "reset";
+
+
+/* Loading背景画面設定　*/
+#splash {
+  /*fixedで全面に固定*/
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background:#E9F2FA;
+    text-align:center;
+    color:#fff;
+  }
+  
+  /* Loading画像中央配置　*/
+  #splash_logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  /* Loading アイコンの大きさ設定　*/
+  #splash_logo img {
+    width:260px;
+  }
+  
+  /* fadeUpをするアイコンの動き */
+  .fadeUp{
+  animation-name: fadeUpAnime;
+  animation-duration:0.5s;
+  animation-fill-mode:forwards;
+  opacity: 0;
+  }
+  
+  @keyframes fadeUpAnime{
+    from {
+      opacity: 0;
+    transform: translateY(100px);
+    }
+  
+    to {
+      opacity: 1;
+    transform: translateY(0);
+    }
+  }
+  
+
 
 .container {
   width: 100%;
@@ -16,6 +64,12 @@
   position: relative;
   margin-bottom: 200px;
 
+  @include g.ph {
+    margin-bottom: 0px;
+    height: 300px;
+    
+  }
+
 
 .about-one-pen-vis {
   width: 100%;
@@ -31,6 +85,18 @@
     transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
+    @include g.ipd {
+      width: 80%;
+        }
+
+        @include g.id {
+          width: 550px;
+            }
+
+    @include g.ph {
+      width: 332px;
+        }
+        
 
   }
 
@@ -38,12 +104,19 @@
     left: 18%;
     top: 25%;
     position:absolute;
+    @include g.dk {
+      left: 9%;
+    }
 
-  //メディアクエリを呼び出して使う
-@include mq(pc){
+@include g.ipd {
   left: 2%;
-
 }
+
+@include g.id {
+  left: 2%;
+  width: 33%;
+}
+
   }
 }
 
@@ -96,6 +169,9 @@
   text-align: center;
   position: relative;
   top: 200px;
+  @include g.ph {
+    top: -79px;  
+  }
 
   .about-one-pen-text {
     width: 50%;
@@ -120,6 +196,16 @@
     transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
+
+    @include g.id {
+      top: -97.7%;
+    }
+
+    @include g.ph {
+      width: 66%;
+      top: 0%; 
+      left: 44%;
+    }
     }
 
     .about-one-pen-back-img {
@@ -131,13 +217,22 @@
     .fluid-big {
       position: absolute;
       top: -415px;
-      left: -8%;
-      width:30vh;/*横幅*/
-      height: 30vh;/*縦幅*/
+      left: -153.6px;
+      width: 495px;
+      height: 412px;
       background:#E9F2FA;/*背景色*/
       animation: fluidrotate 8s ease 0s infinite;/*アニメーションの設定*/
       overflow-x: hidden;
+      z-index: 9;
+      @include g.dk {
+        width: 280px;    
+      }
 
+      @include g.ph {
+       top: 0px;
+       height: 212px;
+       
+      }
     }
     .fluid-small {
       position: absolute;
@@ -148,12 +243,26 @@
       background:#E9F2FA;/*背景色*/
       animation: fluidrotate 15s ease 0s infinite;/*アニメーションの設定*/
       overflow-x: hidden;
+      z-index: 9;
+
+      @include g.ph {
+        height: 112px;
+        top: 102px;
+        right: -13%;
+       }
     }
 
     .small-2 {
       top: -207px;
       right: -3%;
+      @include g.ph {
+        top: 40px;
+        height: 112px;
+        right: -22%;
+
+       }
     }
+
     @keyframes fluidrotate {  
 	  
       0%, 100% {
@@ -181,21 +290,37 @@ height: auto;
 width: 100%;
 margin-top: 22.4%;
 
+@include g.dk {
+  margin-top: 32.4%;
+}
+
+@include g.ph {
+  margin-top: -80px;
+   }
+   @include g.phs {
+    margin-top: -120px;  
+  }
+}
 .concept-img {
   width: 100%;
   height: 100%;
   background-color: #F0F0F0;
   text-align: center;
+  z-index: 10;
+  position: relative;
+
 
 
   img {
-    width: 17%;
+    width: 40%;
   height: 100%;
   object-fit: cover;
   text-align: center;
   margin-bottom: 40px;
   margin-top: -44px;
 
+  @include g.ipd {
+    width: 50%;
   }
 }
 }
@@ -203,6 +328,10 @@ margin-top: 22.4%;
 .wave-mark {
   
   margin-top: 20px;
+
+  @include g.ph {
+    margin-top: -20px;
+  }
 }
 
 
@@ -235,6 +364,9 @@ margin-top: 22.4%;
     height: auto;
     position: absolute;
     margin-top: 100px;
+    @include g.ph {
+      margin-top: 53px;
+    }
 
   }
   .contact-text {
@@ -244,6 +376,16 @@ margin-top: 22.4%;
     position: absolute;
     top: 70px;
     left: 10%;
+    @include g.lp {
+      top: 55px;
+    }
+    @include g.id {
+      top: 55px;
+      width: 17%;
+    }
+    @include g.ph {
+      top: 25px;
+     }
 
   }
   .contact-button {
@@ -253,11 +395,28 @@ margin-top: 22.4%;
     position: absolute;
     top: 70px;
     left: 30%;
+    @include g.lp {
+      top: 55px;
+    }
+    @include g.id {
+      top: 55px;
+      width: 17%;
+    }
+    @include g.ph {
+      top: 25px;
+     }
   }
   .about-contact-pen {
     width: 50%;
     height: auto;
     z-index: 9;
+    @include g.dk {
+      width: 63%;
+    }
+
+    @include g.ipd {
+      width: 75%;
+    }
   }
 
 
@@ -272,6 +431,9 @@ margin-top: 22.4%;
   height: auto;
   margin-top: 200px;
 
+  @include g.ph {
+    margin-top: 100px;
+  }
   }
 }
 

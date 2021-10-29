@@ -100,6 +100,68 @@ header {
   color: blueviolet;
 }
 
+/* Loading背景画面設定　*/
+#splash {
+  /*fixedで全面に固定*/
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background: #E9F2FA;
+  text-align: center;
+  color: #fff;
+}
+
+/* Loading画像中央配置　*/
+#splash_logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+/* Loading アイコンの大きさ設定　*/
+#splash_logo img {
+  width: 260px;
+}
+
+/* fadeUpをするアイコンの動き */
+.fadeUp {
+  -webkit-animation-name: fadeUpAnime;
+          animation-name: fadeUpAnime;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@-webkit-keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
 .container {
   width: 100%;
   height: 100%;
@@ -118,6 +180,12 @@ header {
   position: relative;
   margin-bottom: 200px;
 }
+@media (max-width: 600px) {
+  .container .about-main-vis .main-vis-wrapper {
+    margin-bottom: 0px;
+    height: 300px;
+  }
+}
 .container .about-main-vis .main-vis-wrapper .about-one-pen-vis {
   width: 100%;
   height: 453px;
@@ -133,10 +201,41 @@ header {
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
 }
+@media (max-width: 1024px) {
+  .container .about-main-vis .main-vis-wrapper .about-one-pen-vis .main-vis-img {
+    width: 80%;
+  }
+}
+@media (max-width: 850px) {
+  .container .about-main-vis .main-vis-wrapper .about-one-pen-vis .main-vis-img {
+    width: 550px;
+  }
+}
+@media (max-width: 600px) {
+  .container .about-main-vis .main-vis-wrapper .about-one-pen-vis .main-vis-img {
+    width: 332px;
+  }
+}
 .container .about-main-vis .main-vis-wrapper .about-one-pen-vis .main-vis-text {
   left: 18%;
   top: 25%;
   position: absolute;
+}
+@media (max-width: 1500px) {
+  .container .about-main-vis .main-vis-wrapper .about-one-pen-vis .main-vis-text {
+    left: 9%;
+  }
+}
+@media (max-width: 1024px) {
+  .container .about-main-vis .main-vis-wrapper .about-one-pen-vis .main-vis-text {
+    left: 2%;
+  }
+}
+@media (max-width: 850px) {
+  .container .about-main-vis .main-vis-wrapper .about-one-pen-vis .main-vis-text {
+    left: 2%;
+    width: 33%;
+  }
 }
 .container .about-main-vis .main-vis-wrapper .share {
   width: 100%;
@@ -184,6 +283,11 @@ header {
   position: relative;
   top: 200px;
 }
+@media (max-width: 600px) {
+  .container .about-main-vis .one-pen-text-wrapper {
+    top: -79px;
+  }
+}
 .container .about-main-vis .one-pen-text-wrapper .about-one-pen-text {
   width: 50%;
   height: 100%;
@@ -208,6 +312,18 @@ header {
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
 }
+@media (max-width: 850px) {
+  .container .about-main-vis .one-pen-text-wrapper .about-one-pen-text .about-one-pen-text-box {
+    top: -97.7%;
+  }
+}
+@media (max-width: 600px) {
+  .container .about-main-vis .one-pen-text-wrapper .about-one-pen-text .about-one-pen-text-box {
+    width: 66%;
+    top: 0%;
+    left: 44%;
+  }
+}
 .container .about-main-vis .one-pen-text-wrapper .about-one-pen-text .about-one-pen-back-img {
   position: absolute;
   width: 100%;
@@ -217,17 +333,27 @@ header {
 .container .about-main-vis .one-pen-text-wrapper .about-one-pen-text .fluid-big {
   position: absolute;
   top: -415px;
-  left: -8%;
-  width: 30vh;
-  /*横幅*/
-  height: 30vh;
-  /*縦幅*/
+  left: -153.6px;
+  width: 495px;
+  height: 412px;
   background: #E9F2FA;
   /*背景色*/
   -webkit-animation: fluidrotate 8s ease 0s infinite;
           animation: fluidrotate 8s ease 0s infinite;
   /*アニメーションの設定*/
   overflow-x: hidden;
+  z-index: 9;
+}
+@media (max-width: 1500px) {
+  .container .about-main-vis .one-pen-text-wrapper .about-one-pen-text .fluid-big {
+    width: 280px;
+  }
+}
+@media (max-width: 600px) {
+  .container .about-main-vis .one-pen-text-wrapper .about-one-pen-text .fluid-big {
+    top: 0px;
+    height: 212px;
+  }
 }
 .container .about-main-vis .one-pen-text-wrapper .about-one-pen-text .fluid-small {
   position: absolute;
@@ -243,10 +369,25 @@ header {
           animation: fluidrotate 15s ease 0s infinite;
   /*アニメーションの設定*/
   overflow-x: hidden;
+  z-index: 9;
+}
+@media (max-width: 600px) {
+  .container .about-main-vis .one-pen-text-wrapper .about-one-pen-text .fluid-small {
+    height: 112px;
+    top: 102px;
+    right: -13%;
+  }
 }
 .container .about-main-vis .one-pen-text-wrapper .about-one-pen-text .small-2 {
   top: -207px;
   right: -3%;
+}
+@media (max-width: 600px) {
+  .container .about-main-vis .one-pen-text-wrapper .about-one-pen-text .small-2 {
+    top: 40px;
+    height: 112px;
+    right: -22%;
+  }
 }
 @-webkit-keyframes fluidrotate {
   0%, 100% {
@@ -299,14 +440,31 @@ header {
   width: 100%;
   margin-top: 22.4%;
 }
-.container .about-concept .concept-img {
+@media (max-width: 1500px) {
+  .container .about-concept {
+    margin-top: 32.4%;
+  }
+}
+@media (max-width: 600px) {
+  .container .about-concept {
+    margin-top: -80px;
+  }
+}
+@media (max-width: 400px) {
+  .container .about-concept {
+    margin-top: -120px;
+  }
+}
+.container .concept-img {
   width: 100%;
   height: 100%;
   background-color: #F0F0F0;
   text-align: center;
+  z-index: 10;
+  position: relative;
 }
-.container .about-concept .concept-img img {
-  width: 17%;
+.container .concept-img img {
+  width: 40%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -314,8 +472,18 @@ header {
   margin-bottom: 40px;
   margin-top: -44px;
 }
+@media (max-width: 1024px) {
+  .container .concept-img img {
+    width: 50%;
+  }
+}
 .container .wave-mark {
   margin-top: 20px;
+}
+@media (max-width: 600px) {
+  .container .wave-mark {
+    margin-top: -20px;
+  }
 }
 .container .wave-mark img {
   width: 100%;
@@ -342,6 +510,11 @@ header {
   position: absolute;
   margin-top: 100px;
 }
+@media (max-width: 600px) {
+  .container .about-contact-us-contents img {
+    margin-top: 53px;
+  }
+}
 .container .about-contact-us-contents .contact-text {
   width: auto;
   height: auto;
@@ -349,6 +522,22 @@ header {
   position: absolute;
   top: 70px;
   left: 10%;
+}
+@media (max-width: 1240px) {
+  .container .about-contact-us-contents .contact-text {
+    top: 55px;
+  }
+}
+@media (max-width: 850px) {
+  .container .about-contact-us-contents .contact-text {
+    top: 55px;
+    width: 17%;
+  }
+}
+@media (max-width: 600px) {
+  .container .about-contact-us-contents .contact-text {
+    top: 25px;
+  }
 }
 .container .about-contact-us-contents .contact-button {
   width: auto;
@@ -358,10 +547,36 @@ header {
   top: 70px;
   left: 30%;
 }
+@media (max-width: 1240px) {
+  .container .about-contact-us-contents .contact-button {
+    top: 55px;
+  }
+}
+@media (max-width: 850px) {
+  .container .about-contact-us-contents .contact-button {
+    top: 55px;
+    width: 17%;
+  }
+}
+@media (max-width: 600px) {
+  .container .about-contact-us-contents .contact-button {
+    top: 25px;
+  }
+}
 .container .about-contact-us-contents .about-contact-pen {
   width: 50%;
   height: auto;
   z-index: 9;
+}
+@media (max-width: 1500px) {
+  .container .about-contact-us-contents .about-contact-pen {
+    width: 63%;
+  }
+}
+@media (max-width: 1024px) {
+  .container .about-contact-us-contents .about-contact-pen {
+    width: 75%;
+  }
 }
 .container .sub-footer {
   width: 100%;
@@ -371,6 +586,11 @@ header {
   width: 100%;
   height: auto;
   margin-top: 200px;
+}
+@media (max-width: 600px) {
+  .container .sub-footer img {
+    margin-top: 100px;
+  }
 }
 
 .container {
