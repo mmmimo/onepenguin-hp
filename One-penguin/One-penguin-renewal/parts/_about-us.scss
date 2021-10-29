@@ -1,5 +1,54 @@
-@use "../global";
+@use "../global" as g;
 @use "reset";
+
+
+/* Loading背景画面設定　*/
+#splash {
+  /*fixedで全面に固定*/
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background:#E9F2FA;
+    text-align:center;
+    color:#fff;
+  }
+  
+  /* Loading画像中央配置　*/
+  #splash_logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  /* Loading アイコンの大きさ設定　*/
+  #splash_logo img {
+    width:260px;
+  }
+  
+  /* fadeUpをするアイコンの動き */
+  .fadeUp{
+  animation-name: fadeUpAnime;
+  animation-duration:0.5s;
+  animation-fill-mode:forwards;
+  opacity: 0;
+  }
+  
+  @keyframes fadeUpAnime{
+    from {
+      opacity: 0;
+    transform: translateY(100px);
+    }
+  
+    to {
+      opacity: 1;
+    transform: translateY(0);
+    }
+  }
+  
+
+
 .container {
   width: 100%;
   height: 100%;
@@ -14,6 +63,12 @@
   display: flex;
   position: relative;
   margin-bottom: 200px;
+
+  @include g.ph {
+    margin-bottom: 0px;
+    height: 300px;
+    
+  }
 
 
 .about-one-pen-vis {
@@ -30,13 +85,38 @@
     transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
+    @include g.ipd {
+      width: 80%;
+        }
+
+        @include g.id {
+          width: 550px;
+            }
+
+    @include g.ph {
+      width: 332px;
+        }
+        
 
   }
 
   .main-vis-text {
-    left: 13%;
-    top: 60%;
+    left: 18%;
+    top: 25%;
     position:absolute;
+    @include g.dk {
+      left: 9%;
+    }
+
+@include g.ipd {
+  left: 2%;
+}
+
+@include g.id {
+  left: 2%;
+  width: 33%;
+}
+
   }
 }
 
@@ -48,7 +128,7 @@
   float: right;
   display: block;
   left: 95%;
-  top: 200px;
+  top: 70px;
 
   img {
     width: auto;
@@ -67,13 +147,15 @@
   width: 100%;
   z-index: 10;
   top: -7%;
+  left: -4px;
+
 
     .share-icon-twi {
-      top: 20%;
+      top: 18%;
       position: absolute;
     }
     .share-icon-fb {
-      top: 25%;
+      top: 24%;
       position: absolute;
     }
   }
@@ -83,10 +165,13 @@
 
 .one-pen-text-wrapper {
   width: 100%;
-  height: 800px;
+  height: 100%;
   text-align: center;
   position: relative;
   top: 200px;
+  @include g.ph {
+    top: -79px;  
+  }
 
   .about-one-pen-text {
     width: 50%;
@@ -103,14 +188,24 @@
     }
     .about-one-pen-text-box {
       position: absolute;
-      width: 50%;
+      width: 550px;            
       height: auto;
       z-index: 10;
-      top: -50%;
-      left: 50%;
+      top: -79.7%;
+      left: 48.7%;
     transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
+
+    @include g.id {
+      top: -97.7%;
+    }
+
+    @include g.ph {
+      width: 66%;
+      top: 0%; 
+      left: 44%;
+    }
     }
 
     .about-one-pen-back-img {
@@ -119,35 +214,131 @@
       height: auto;
       z-index: 9;
     }
+    .fluid-big {
+      position: absolute;
+      top: -415px;
+      left: -153.6px;
+      width: 495px;
+      height: 412px;
+      background:#E9F2FA;/*背景色*/
+      animation: fluidrotate 8s ease 0s infinite;/*アニメーションの設定*/
+      overflow-x: hidden;
+      z-index: 9;
+      @include g.dk {
+        width: 280px;    
+      }
+
+      @include g.ph {
+       top: 0px;
+       height: 212px;
+       
+      }
+    }
+    .fluid-small {
+      position: absolute;
+      top: -227px;
+      right: -6%;
+      width:20vh;/*横幅*/
+      height: 10vh;/*縦幅*/
+      background:#E9F2FA;/*背景色*/
+      animation: fluidrotate 15s ease 0s infinite;/*アニメーションの設定*/
+      overflow-x: hidden;
+      z-index: 9;
+
+      @include g.ph {
+        height: 112px;
+        top: 102px;
+        right: -13%;
+       }
+    }
+
+    .small-2 {
+      top: -207px;
+      right: -3%;
+      @include g.ph {
+        top: 40px;
+        height: 112px;
+        right: -22%;
+
+       }
+    }
+
+    @keyframes fluidrotate {  
+	  
+      0%, 100% {
+          border-radius: 62% 38% 16% 84% / 68% 54% 46% 32%;}
+      10% {
+          border-radius: 15% 85% 80% 20% / 68% 54% 46% 32%;}
+      25% {
+          border-radius: 54% 46% 38% 62%/49% 70% 30% 51%;}
+      39% {
+          border-radius: 61% 39% 55% 45%/61% 38% 62% 39%;}
+      56% {
+          border-radius: 61% 39% 67% 33%/70% 50% 50% 30%;}
+      76% {
+          border-radius: 50% 50% 34% 66%/56% 68% 32% 44%;}
+      94% {
+          border-radius: 46% 54% 50% 50%/35% 61% 39% 65%;}
+      }
 
   }
  } 
 }
  // ________________section_________________
 .about-concept {
-height: 100%;
+height: auto;
 width: 100%;
-margin-top: 801px;
+margin-top: 22.4%;
 
+@include g.dk {
+  margin-top: 32.4%;
+}
+
+@include g.ph {
+  margin-top: -80px;
+   }
+   @include g.phs {
+    margin-top: -120px;  
+  }
+}
 .concept-img {
   width: 100%;
   height: 100%;
+  background-color: #F0F0F0;
+  text-align: center;
+  z-index: 10;
+  position: relative;
+
+
+
   img {
-    width: 100%;
+    width: 40%;
   height: 100%;
   object-fit: cover;
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: -44px;
+
+  @include g.ipd {
+    width: 50%;
   }
 }
 }
 // ________________section_________________
 .wave-mark {
-  top: 20%;
+  
+  margin-top: 20px;
+
+  @include g.ph {
+    margin-top: -20px;
+  }
 }
 
 
 .wave-mark img {
   width: 100%;
   height: auto;
+  margin-top: 50px;
 }
 // ________________section_________________
 .about-company {
@@ -157,7 +348,7 @@ margin-top: 801px;
     width: 50%;
     height: 100%;
     text-align: center;
-    margin-top: 220px;
+    margin-top: 20px;
   }
 }
 }
@@ -173,21 +364,59 @@ margin-top: 801px;
     height: auto;
     position: absolute;
     margin-top: 100px;
+    @include g.ph {
+      margin-top: 53px;
+    }
 
   }
   .contact-text {
     width: auto;
     height: auto;
     z-index: 10;
+    position: absolute;
+    top: 70px;
+    left: 10%;
+    @include g.lp {
+      top: 55px;
+    }
+    @include g.id {
+      top: 55px;
+      width: 17%;
+    }
+    @include g.ph {
+      top: 25px;
+     }
+
   }
   .contact-button {
     width: auto;
     height: auto;
     z-index: 10;
+    position: absolute;
+    top: 70px;
+    left: 30%;
+    @include g.lp {
+      top: 55px;
+    }
+    @include g.id {
+      top: 55px;
+      width: 17%;
+    }
+    @include g.ph {
+      top: 25px;
+     }
   }
   .about-contact-pen {
     width: 50%;
     height: auto;
+    z-index: 9;
+    @include g.dk {
+      width: 63%;
+    }
+
+    @include g.ipd {
+      width: 75%;
+    }
   }
 
 
@@ -202,8 +431,17 @@ margin-top: 801px;
   height: auto;
   margin-top: 200px;
 
+  @include g.ph {
+    margin-top: 100px;
+  }
   }
 }
 
 
 } // ________________container_________________
+
+
+
+ // ________________responsive_________________
+
+
