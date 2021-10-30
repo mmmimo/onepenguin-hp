@@ -236,9 +236,16 @@
   @include g.tab {
     height: 85vh;
   }
+  @include g.ph {
+    height: 70vh;
+  }
   @include g.sp {
     height: 66vh;
   }
+  @include g.phs {
+    height: 50vh;
+  }
+
   .w_price_title {
     text-align: center;
     width: 100%;
@@ -279,6 +286,9 @@
     left: 0;
     right: 0;
     margin: auto;
+    p {
+      font-size: 2vw;
+    }
     @include g.tab {
       top: 18%;
       width: 88%;
