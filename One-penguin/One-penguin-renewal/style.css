@@ -814,10 +814,16 @@ header {
 }
 .w_works .more_btn {
   text-align: center;
+  position: relative;
 }
 .w_works .more_btn .w_btn {
-  width: 12vw;
-  height: 3vw;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  width: 13.5vw;
+  height: 3.5vw;
   border-radius: 100vh;
   background-color: white;
   border: 3px solid #00114c;
@@ -991,7 +997,6 @@ header {
   width: 58%;
   margin: 0 auto;
   margin-top: 13.5vw;
-
 }
 @media (max-width: 794px) {
   .w_contact .w_contact_text {
@@ -1002,8 +1007,6 @@ header {
   .w_contact .w_contact_text {
     margin-top: 0;
   }
-
-
 }
 .w_contact .w_title {
   font-size: 1.5vw;
