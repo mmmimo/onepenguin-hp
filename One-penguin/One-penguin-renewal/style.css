@@ -870,9 +870,19 @@ header {
     height: 85vh;
   }
 }
+@media (max-width: 600px) {
+  .w_price {
+    height: 70vh;
+  }
+}
 @media (max-width: 500px) {
   .w_price {
     height: 66vh;
+  }
+}
+@media (max-width: 400px) {
+  .w_price {
+    height: 50vh;
   }
 }
 .w_price .w_price_title {
@@ -928,6 +938,9 @@ header {
   left: 0;
   right: 0;
   margin: auto;
+}
+.w_price .w_price_wrapper p {
+  font-size: 2vw;
 }
 @media (max-width: 794px) {
   .w_price .w_price_wrapper {
