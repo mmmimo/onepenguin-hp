@@ -13,6 +13,7 @@
     @media (max-width: 500px) {
         @content;
     }
+
 }
 
 // ______________________________________________
@@ -29,6 +30,7 @@
     }
 }
 
+
 @mixin ipd {
     @media (max-width: 1024px) {
         @content;
@@ -40,6 +42,7 @@
         @content;
     }
 }
+
 
 @mixin ph {
     @media (max-width: 600px) {
@@ -53,42 +56,34 @@
     }
 }
 
-@mixin iphse {
-    @media (max-width: 350px) {
-        @content;
-    }
-}
+
 
 
 $breakpoints: (
-    "ph": "screen and (max-width: 600px)",
-    //スマホ
-    "tabl": "screen and (max-width: 800px)",
-    //タブレット
-    "ipd": "screen and (max-width: 1024px)",
-    //ipad
-    "lp": "screen and (max-width: 1440px)",
-    //laptop
+  'ph': 'screen and (max-width: 600px)',  //スマホ
+  'tabl': 'screen and (max-width: 800px)', //タブレット
+  'ipd': 'screen and (max-width: 1024px)', //ipad
+  'lp': 'screen and (max-width: 1440px)', //laptop
 ) !default;
 
 @mixin mq($breakpoint: --) {
     @media #{map-get($breakpoints, $breakpoint)} {
-        @content;
+      @content;
     }
-}
+  }
 
-//ブレイクポイントの種類を定義
+  //ブレイクポイントの種類を定義
 $breakPoints: (
     ‘pc’: ‘1280px’,
     ‘tablet’: ‘768px’,
     ‘sp’: ‘480px’,
-);
-//メディアクエリを呼び出す記述
+  );
+  //メディアクエリを呼び出す記述
 @mixin mq($breakPoint) {
     @media screen and (max-width: #{map-get($breakPoints, $breakPoint)}) {
-        @content;
+      @content;
     }
-}
+  }
 
 // 例  .foo {
 //     color: blue;

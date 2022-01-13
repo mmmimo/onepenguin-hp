@@ -2,26 +2,25 @@
 @use "reset";
 .container {
   width: 100%;
-  height: auto;
-}
-.sp-br {
-  display: none;
-  @include g.sp {
-  display: inline;
-  }
+  height: 100%;
 }
 .w_main {
   width: 100%;
   height: 66vw;
-  @include g.sp {
-    height: 400px;
-  }
   .w_main_top {
     background-color: #f0f0f0;
     width: 100%;
     height: 26vw;
     display: flex;
     position: relative;
+    @include g.tab {
+      background-color: red;
+    }
+    @include g.sp {
+      color: green;
+      font-size: 10px;
+      background-color: bisque;
+    }
     .penguin {
       position: absolute;
       bottom: -30%;
@@ -36,63 +35,39 @@
       object-fit: contain;
       margin: 0 auto;
       margin-top: 3vw;
-
-      @include g.sp {
-        display: none;
-      }
     }
   }
 
   h1 {
     font-size: 2vw;
     color: #050037;
-    font-family: 'TsukuARdGothic-Regular',sans-serif;
+    font-family: fot-tsukuardgothic-std, sans-serif;
     font-style: normal;
     font-weight: 700;
     margin-top: 4vw;
     margin-left: 20vw;
     line-height: 4vw;
     letter-spacing: 0.2vw;
-
-    @include g.sp {
-      font-size: 3.5vw;
-      margin-top: 6vw;
-      margin-left: 33vw;
-      line-height: 5vw;
-    }
   }
   .w_main_under {
     text-align: center;
     position: relative;
     height: 28.5vw;
     width: 100%;
-    @include g.sp {
-      height: auto;
-    }
     .policy {
       width: 30vw;
       height: 20vw;
       object-fit: contain;
       margin-top: -2%;
-      @include g.sp {
-        width: 44vw;
-        height: 30vw;
-      }
     }
     h2 {
       margin-top: -3%;
       font-size: 1.35vw;
       color: #050037;
-      font-family: 'TsukuARdGothic-Regular',sans-serif;
+      font-family: fot-tsukuardgothic-std, sans-serif;
       font-style: normal;
       font-weight: 700;
       line-height: 2.7vw;
-      @include g.tab {
-      }
-      @include g.sp {
-        font-size: 2vw;
-        line-height: 5.5vw;
-      }
     }
     .right_back {
       position: absolute;
@@ -108,33 +83,16 @@
     width: 100%;
     height: 10vw;
     object-fit: contain;
-    @include g.sp {
-    height: 60px;
-    }
   }
 }
 .w_works {
   width: 100%;
   height: 89vw;
   position: relative;
-  @include g.tab {
-    height: 108vh;
-  }
-
-  @include g.tab {
-    height: 1200px;
-  }
-  @include g.ph {
-    height: 1200px;
-  }
-  @include g.sp {
-    height: 1200px;
-  }
 
   .back {
     position: absolute;
     left: -1%;
-    z-index: -2;
   }
   .w_works_title {
     text-align: center;
@@ -142,14 +100,6 @@
       width: 11vw;
       height: 11vw;
       object-fit: contain;
-      @include g.tab {
-        width: 17vw;
-        height: 20vw;
-      }
-      @include g.sp {
-        width: 130px;
-        height: 100px;
-      }
     }
   }
 
@@ -159,14 +109,6 @@
     height: 52vw;
     margin: 0 auto;
     justify-content: space-around;
-    @include g.tab {
-      height: 900px;
-      width: 82vw;
-    }
-    @include g.sp {
-      height: 950px;
-      width: 100%;
-    }
 
     /* 横並びに表示する */
     flex-wrap: wrap;
@@ -182,81 +124,26 @@
       width: 33%;
       height: 18vw;
       font-size: 0.6vw;
-      @include g.tab {
-        width: 50%;
-      }
-      @include g.tab {
-        height: 40vw;
-      }
-      @include g.sp {
-        height: auto;      
-      }
       img {
         width: 15vw;
         height: 15vw;
         object-fit: contain;
-        @include g.tab {
-          height: 25vw;
-          width: 25vw;
-        }
-        @include g.sp {
-          width: 35vw;
-          height:auto;
-        }
-
       }
-      .ex_text {
-        font-family: 'TsukuARdGothic-Regular',sans-serif;
-        color: #000000;
-      }
-
-
       .ex_url {
         font-weight: bold;
-        color: #00114C;
-        font-family: 'TsukuARdGothic-Regular',sans-serif;
-        font-size: clamp(10px,0.73vw,14px);
-        @include g.iphse {
-          margin-left: -7px;
-          font-weight: normal;
-        }
-
       }
     }
   }
   .more_btn {
     text-align: center;
-    position: relative;
     .w_btn {
-      position: absolute;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-      width: 13.5vw;
-      height: 3.5vw;
+      width: 12vw;
+      height: 3vw;
       border-radius: 100vh;
       background-color: white;
       border: 3px solid #00114c;
       color: #050037;
       font-weight: bold;
-      font-size : clamp(10px,0.63vw,12px);
-      letter-spacing : 0.9px;
-      color : #000000;
-    
-      @include g.ipd {
-        border: 2px solid #00114c;
-      }
-      @include g.tab {
-        width: 20vw;
-        height: 6vw;
-        font-size: 12px;
-      }
-      @include g.sp {
-        width: 30vw;
-        height: 8vw;
-        
-      }
     }
   }
   .right_back {
@@ -272,17 +159,6 @@
     width: 16vw;
     height: 16vw;
     object-fit: contain;
-
-    @include g.id {
-    left: 5%;
-    width: 50vw;
-    }
-    @include g.sp {
-      left: -4%;
-    width: 150px;
-    height: 100px;
-    }
-
   }
 }
 
@@ -291,43 +167,16 @@
   height: 80vw;
   z-index: 1;
   position: relative;
-  @include g.tab {
-    height: 900px;
-  }
-  @include g.ph {
-    height: 80vh;
-  }
-  @include g.sp {
-    height: 75vh;
-  }
-  @include g.phs {
-    height:62vh;
-  }
-
   .w_price_title {
     text-align: center;
     width: 100%;
     height: 33vw;
     background-color: #f0f0f0;
-    @include g.sp {
-      height: 13vh;
-    }
-    @include g.sp {
-      height: 14vh;
-    }
     img {
       width: 10vw;
       height: 10vw;
       object-fit: contain;
       margin-top: 2vw;
-      @include g.tab {
-        width: 17vw;
-        height: 20vw;
-      }
-      @include g.sp {
-        width: 22vw;
-        height: 20vw;
-      }
     }
   }
   .w_price_wrapper {
@@ -344,20 +193,7 @@
     left: 0;
     right: 0;
     margin: auto;
-    p {
-      font-family: 'TsukuARdGothic-Regular',sans-serif;
-      font-size : clamp(10px,0.63vw,12px);
-      line-height : 21.44px;
-      color : #000000;
-    
-    }
-    @include g.tab {
-      top: 18%;
-      width: 88%;
-    }
-    @include g.sp {
-      top: 19%;
-    }
+
     .box {
       width: 31%;
       height: 50vw;
@@ -372,18 +208,11 @@
     position: absolute;
     left: 0;
     top: 50%;
-    @include g.sp {
-    display: none;
-    }
   }
   .w_contact_wrapper {
     width: 100%;
     height: 53vw;
     position: relative;
-    @include g.tab {
-      height: 65vw;
-    }
-
     .pcs {
       position: absolute;
       right: 10%;
@@ -391,12 +220,6 @@
       width: 36vw;
       height: 22vw;
       object-fit: contain;
-      @include g.tab {
-        bottom: -28vh;
-      }
-      @include g.ph {
-        display: none;
-      }
     }
   }
 }
@@ -406,7 +229,7 @@
   position: relative;
   z-index: 10;
   color: #050037;
-  font-family: 'TsukuARdGothic-Regular',sans-serif;
+  font-family: fot-tsukuardgothic-std, sans-serif;
   font-style: normal;
   font-weight: 700;
   width: 100%;
@@ -415,12 +238,6 @@
     width: 58%;
     margin: 0 auto;
     margin-top: 13.5vw;
-    @include g.tab {
-      width: 83%;
-    }
-    @include g.sp {
-      margin-top: 0;
-    }
   }
   .w_title {
     font-size: 1.5vw;
@@ -429,16 +246,12 @@
   .w_sub_title {
     font-size: 1vw;
     margin: 0.4vw 0;
-    font-weight: normal;
   }
   .w_long {
     position: absolute;
     z-index: -1;
     width: 82vw;
     height: 33vw;
-    @include g.sp {
-      top: -38%;
-    }
   }
   .long {
     position: absolute;
@@ -446,10 +259,6 @@
     height: 33vw;
     object-fit: contain;
     left: -2%;
-    z-index: -2;
-    @include g.sp {
-      height: 27vw;
-    }
   }
   .contact_btn {
     position: absolute;
@@ -459,14 +268,6 @@
     left: 0;
     right: 0;
     margin: auto;
-    @include g.tab {
-      width: 20vw;
-      height: 5.3vw;
-    }
-    @include g.sp {
-      top: -20%;
-      left: 44%;
-    }
     .w_c {
       width: 16vw;
       height: 3.3vw;
@@ -477,30 +278,10 @@
       font-weight: bold;
       margin-top: 7vw;
       margin-left: 0vw;
-      @include g.ipd {
-        border: 2px solid #00114c;
-        width: 18vw;
-      }
-      @include g.tab {
-        width: 20vw;
-        height: 5.3vw;
-      }
-      @include g.sp {
-        width: 30vw;
-        height: 31px;
-        font-size: 11px;
-        border: 1px solid #00114c;
-
-      }
     }
     .alow {
       position: relative;
       right: -3vw;
-      @include g.tab {
-        display: none;
-      }
-      @include g.sp {
-      }
     }
   }
 }
