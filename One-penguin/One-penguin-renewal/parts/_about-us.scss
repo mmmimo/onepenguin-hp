@@ -62,6 +62,10 @@
   @include g.id {
     height: 87vw;
   }
+  @include g.ph {
+    height: 1200px;
+  }
+
 
 .main-vis-wrapper { // ________________section_________________
   width: 100%;
@@ -103,6 +107,9 @@
     @include g.ph {
       width: 332px;
         }
+        @include g.ph {
+          display: none;
+          }
         
 
   }
@@ -123,8 +130,22 @@
   left: 2%;
   width: 33%;
 }
+@include g.ph {
+display: none;
+}
 
   }
+
+  .sp-main-vis {
+    display: none;
+    @include g.ph {
+      display: block;
+      width: 100%;
+    object-fit: cover;
+    height: 350px;
+    object-position: 57%;
+  }
+}
 }
 
 
@@ -176,7 +197,7 @@
     text-align: center;
     position: relative;
   @include g.ph {
-    top: -79px;  
+    top: 100px;  
   }
   
 
@@ -193,6 +214,7 @@
     @include g.ph {
       top: 40%;
       }
+      
 
     img {
       
@@ -212,12 +234,12 @@
     -ms-transform: translateX(-50%);
 
     @include g.ph {
-      width: 66%;
-      top: 0%; 
-      left: 44%;
+      width: auto;
+    top: 0%;
+    left: 50%;
     }
     p {
-      font-size : clamp(10px,0.57vw,11px);
+      font-size : clamp(10px,0.83vw,16px);
       color: #000000;
       font-family: 'TsukuARdGothic-Regular',sans-serif;
       writing-mode: vertical-rl;
@@ -225,10 +247,22 @@
       font-weight: bold;
       margin: 0 auto;
       line-height: 24px;
+      @include g.ph {
+        writing-mode:inherit;
+      }
+
 
       .one-pen-big-text {
         line-height: 31px;
-        font-size : clamp(13px,0.89vw,17px);
+        font-size : clamp(13px,1.04vw,20px);
+        @include g.ph {
+          position: relative;
+          line-height: 31px;
+          font-size: clamp(13px, 0.89vw, 17px);
+          margin: 0 auto;
+          text-align: center;
+          left: 13%;
+          transform: translateX(-50%);        }
       }
       .one-pen-big-height {
         line-height: 31px;
@@ -249,6 +283,15 @@
         top: 50%;
         left: 31%;
         position: absolute;
+        @include g.ph {
+          width: 33%;
+          height: auto;
+          top: 90%;
+          left: 50%;
+          position: absolute;
+          transform: translateX(-50%);
+        }
+ 
       }
 
     }
@@ -284,7 +327,7 @@
 
       @include g.ph {
         height: 112px;
-        top: 102px;
+        top: 402px;
         right: -13%;
        }
     }
@@ -293,7 +336,7 @@
       top: 207px;
       right: -3%;
       @include g.ph {
-        top: 40px;
+        top: 400px;
         height: 112px;
         right: -22%;
 
@@ -357,6 +400,9 @@ width: 100%;
   @include g.ipd {
     width: 8.75%;
   }
+  @include g.ph {
+  width: 100px;
+  }
   
 }
 .po-re {
@@ -377,6 +423,7 @@ width: 100%;
     color : #152041;
     font-weight: bold;
     font-family: 'TsukuARdGothic-Regular',sans-serif;
+    
 }
 
 }
@@ -398,22 +445,124 @@ width: 100%;
 }
 // ________________section_________________
 .about-company {
-  .company-content {
-    text-align: center;
+  margin-top: 3.98vw;
+  text-align: center;
+
+  .about-company-title {
+    width: auto;
+    margin-bottom: 4.77vw;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include g.ph {
+      width: 60%;
+      margin-bottom: 23.77vw;
+    }
     img {
-    width: 50%;
-    height: 100%;
-    text-align: center;
-    margin-top: 20px;
+      width: auto;
+      margin: 0 auto;
+      @include g.ph {
+      width: 100%;
+      }
+
+    }
+  }
+  .company-content {
+    text-align: center;  
+    @include g.ph {
+      margin-bottom: 130px;
+      
+    }
+
+    img {
+      width: auto;
+
+      @include g.id {
+      width: 100%;
+     }
+     @include g.ph {
+      transform: scale(1.4);
+    }
+    }
   }
 }
-}
+
+//   .about-company-title {
+//     text-align: center;
+//     width: auto;
+//     height: auto;
+//   }
+//   .company-info-wrapper {
+//     position: relative;
+//     text-align: center;
+//     img {
+//       width: 50%;
+//       height: 100%;
+//       text-align: center;
+//       margin-top: 20px;
+//       z-index: 1;
+//     }
+  
+//   p {
+//     font-size : clamp(10px,0.63vw,14px);
+//     line-height : 22.34px;
+//     letter-spacing : 0.9px;
+//     color : #152041;
+//     font-family: 'TsukuARdGothic-Regular',sans-serif;
+//     font-weight: bold;
+//     font-style: oblique;
+//     z-index: 2;
+//     top: 15%;
+//     left: 50%;
+//   transform: translateY(-50%) translateX(-50%);
+//   }
+// }
+// .company-info {
+//   position: absolute;
+//   top: 22%;
+//   left: 50%;
+//   transform:translateX(-50%);
+//   ul {
+//     li  {
+//       width: 28.75vw;
+//       display: flex;
+//       position: initial;
+//       z-index: 2;
+//       p {
+//         font-size : clamp(10px,0.63vw,14px);
+//         line-height : 22.34px;
+//         letter-spacing : 0.9px;
+//         color : #152041;
+//         font-family: 'TsukuARdGothic-Regular',sans-serif;
+//         font-weight: bold;
+//         .content-name {
+//         width: 7.27vw;
+//         height: auto;
+//         position: inherit;
+
+//       }
+//       .contact-us {
+//         position: inherit;
+      
+//     }
+//   }
+//     .border {
+//       width: 28.75vw;
+//       border: solid 1px #00114C;
+//     }
+//    }
+//   }
+//  }
+
 // ________________section_________________
 
 .about-contact-us-contents {
   width: 100%;
   height: auto;
   position: relative;
+  @include g.ph {
+    height: 100px;
+  }
 
   img {
     width: 100%;
@@ -421,7 +570,7 @@ width: 100%;
     position: absolute;
     margin-top: 100px;
     @include g.ph {
-      margin-top: 53px;
+      margin-top: 100px;
     }
 
   }
@@ -433,14 +582,15 @@ width: 100%;
     top: 70px;
     left: 10%;
     @include g.lp {
-      top: 55px;
+      top: 65px;
     }
     @include g.id {
-      top: 55px;
+      top: 40px;
       width: 17%;
     }
     @include g.ph {
-      top: 25px;
+      top: 22px;
+      
      }
 
   }
@@ -451,15 +601,21 @@ width: 100%;
     position: absolute;
     top: 70px;
     left: 30%;
-    @include g.lp {
+    @include g.dk {
       top: 55px;
+      width: 25%;
+      left: 50%;
+    transform: translateX(-50%);
     }
     @include g.id {
-      top: 55px;
-      width: 17%;
+      top: 40px;
+
     }
     @include g.ph {
-      top: 25px;
+      top: 13px;
+      width: 40%;
+      left: 50%;
+    transform: translateX(-50%);
      }
   }
   .about-contact-pen {
@@ -467,12 +623,16 @@ width: 100%;
     height: auto;
     z-index: 9;
     @include g.dk {
-      width: 63%;
+      width: 90%;
     }
 
     @include g.ipd {
       width: 75%;
     }
+    @include g.ipd {
+      width: 92%;
+    }
+
   }
 
 
@@ -488,7 +648,7 @@ width: 100%;
   margin-top: 200px;
 
   @include g.ph {
-    margin-top: 100px;
+    margin-top: 0px;
   }
   }
 }

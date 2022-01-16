@@ -419,9 +419,13 @@
       width: 83%;
     }
     @include g.sp {
-      margin-top: 0;
-    }
-  }
+      margin-top: -44px;
+      left: 50%;
+      transform: translateX(-50%);
+      position: absolute;
+      width: auto;
+      }
+      }
   .w_title {
     font-size: 1.5vw;
     margin: 0.4vw 0;
@@ -437,7 +441,7 @@
     width: 82vw;
     height: 33vw;
     @include g.sp {
-      top: -38%;
+      top: -58%;
     }
   }
   .long {
@@ -449,6 +453,10 @@
     z-index: -2;
     @include g.sp {
       height: 27vw;
+      object-fit: contain;
+    left: -42%;
+    z-index: -2;
+    transform: scale(2.3);
     }
   }
   .contact_btn {
@@ -465,7 +473,8 @@
     }
     @include g.sp {
       top: -20%;
-      left: 44%;
+      width: auto;
+      height: auto;
     }
     .w_c {
       width: 16vw;
@@ -486,11 +495,13 @@
         height: 5.3vw;
       }
       @include g.sp {
-        width: 30vw;
+        width: 33vw;
         height: 31px;
         font-size: 11px;
         border: 1px solid #00114c;
-
+        left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
       }
     }
     .alow {
