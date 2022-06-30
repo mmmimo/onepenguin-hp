@@ -700,6 +700,75 @@ header {
   height: 89vw;
   position: relative;
 }
+<<<<<<< Updated upstream
+=======
+@media (max-width: 794px) {
+  .w_works {
+    height: 108vh;
+  }
+}
+@media (max-width: 794px) {
+  .w_works {
+    height: 1200px;
+  }
+}
+@media (max-width: 600px) {
+  .w_works {
+    height: 1200px;
+  }
+}
+@media (max-width: 500px) {
+  .w_works {
+    height: 1100px;
+  }
+}
+.w_works .fluid-big {
+  position: absolute;
+  left: -153.6px;
+  width: 495px;
+  height: 412px;
+  background: #E9F2FA;
+  /*背景色*/
+  -webkit-animation: fluidrotate 8s ease 0s infinite;
+          animation: fluidrotate 8s ease 0s infinite;
+  /*アニメーションの設定*/
+  overflow-x: hidden;
+  z-index: -1;
+}
+@media (max-width: 1500px) {
+  .w_works .fluid-big {
+    width: 280px;
+  }
+}
+@media (max-width: 600px) {
+  .w_works .fluid-big {
+    top: 0px;
+    height: 212px;
+  }
+}
+.w_works .fluid-small {
+  position: absolute;
+  top: 65vw;
+  right: -6%;
+  width: 23vh;
+  /*横幅*/
+  height: 13vh;
+  /*縦幅*/
+  background: #E9F2FA;
+  /*背景色*/
+  -webkit-animation: fluidrotate 15s ease 0s infinite;
+          animation: fluidrotate 15s ease 0s infinite;
+  /*アニメーションの設定*/
+  overflow-x: hidden;
+  z-index: -1;
+}
+@media (max-width: 600px) {
+  .w_works .fluid-small {
+    height: 112px;
+    right: -13%;
+  }
+}
+>>>>>>> Stashed changes
 .w_works .back {
   position: absolute;
   left: -1%;
@@ -723,8 +792,24 @@ header {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   /* 横並びに表示する */
+<<<<<<< Updated upstream
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+=======
+  flex-wrap: wrap;
+}
+@media (max-width: 794px) {
+  .w_works .ex_wrapper {
+    height: 900px;
+    width: 82vw;
+  }
+}
+@media (max-width: 500px) {
+  .w_works .ex_wrapper {
+    height: 820px;
+    width: 100%;
+  }
+>>>>>>> Stashed changes
 }
 .w_works .ex_wrapper .img {
   margin: 0 auto;
@@ -750,7 +835,59 @@ header {
   font-weight: bold;
 }
 .w_works .more_btn {
+<<<<<<< Updated upstream
   text-align: center;
+=======
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  height: 80px;
+  max-width: 250px;
+  margin: 1rem auto;
+  text-transform: uppercase;
+  border: 1px solid currentColor;
+}
+.w_works .more_btn .btn-11 {
+  position: relative;
+  color: #29adbc;
+}
+.w_works .more_btn .btn-11:before, .w_works .more_btn .btn-11:after {
+  position: absolute;
+  top: 50%;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: #039eb0;
+  border-radius: 50%;
+}
+.w_works .more_btn .btn-11:before {
+  left: -20px;
+  transform: translate(-50%, -50%);
+}
+.w_works .more_btn .btn-11:after {
+  right: -20px;
+  transform: translate(50%, -50%);
+}
+.w_works .more_btn .btn-11:hover {
+  color: #c0e7eb;
+}
+.w_works .more_btn .btn-11:hover:before {
+  -webkit-animation: criss-cross-left 0.8s both;
+  animation: criss-cross-left 0.8s both;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+.w_works .more_btn .btn-11:hover:after {
+  -webkit-animation: criss-cross-right 0.8s both;
+  animation: criss-cross-right 0.8s both;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+>>>>>>> Stashed changes
 }
 .w_works .more_btn .w_btn {
   width: 12vw;
@@ -760,6 +897,30 @@ header {
   border: 3px solid #00114c;
   color: #050037;
   font-weight: bold;
+<<<<<<< Updated upstream
+=======
+  font-size: clamp(10px, 0.83vw, 16px);
+  letter-spacing: 0.9px;
+  color: #000000;
+}
+@media (max-width: 1024px) {
+  .w_works .more_btn .w_btn {
+    border: 2px solid #00114c;
+  }
+}
+@media (max-width: 794px) {
+  .w_works .more_btn .w_btn {
+    width: 20vw;
+    height: 6vw;
+    font-size: 12px;
+  }
+}
+@media (max-width: 500px) {
+  .w_works .more_btn .w_btn {
+    width: 30vw;
+    height: 8vw;
+  }
+>>>>>>> Stashed changes
 }
 .w_works .right_back {
   position: absolute;
@@ -784,6 +945,29 @@ header {
   z-index: 1;
   position: relative;
 }
+<<<<<<< Updated upstream
+=======
+@media (max-width: 794px) {
+  .w_price {
+    height: 900px;
+  }
+}
+@media (max-width: 600px) {
+  .w_price {
+    height: 80vh;
+  }
+}
+@media (max-width: 500px) {
+  .w_price {
+    height: 83vh;
+  }
+}
+@media (max-width: 400px) {
+  .w_price {
+    height: 70vh;
+  }
+}
+>>>>>>> Stashed changes
 .w_price .w_price_title {
   text-align: center;
   width: 100%;
@@ -816,6 +1000,26 @@ header {
   right: 0;
   margin: auto;
 }
+<<<<<<< Updated upstream
+=======
+.w_price .w_price_wrapper p {
+  font-family: "TsukuARdGothic-Regular", sans-serif;
+  font-size: clamp(10px, 0.63vw, 12px);
+  line-height: 21.44px;
+  color: #000000;
+}
+@media (max-width: 794px) {
+  .w_price .w_price_wrapper {
+    top: 18%;
+    width: 88%;
+  }
+}
+@media (max-width: 500px) {
+  .w_price .w_price_wrapper {
+    top: 20%;
+  }
+}
+>>>>>>> Stashed changes
 .w_price .w_price_wrapper .box {
   width: 31%;
   height: 50vw;
@@ -895,6 +1099,27 @@ header {
   right: 0;
   margin: auto;
 }
+<<<<<<< Updated upstream
+=======
+@media (max-width: 794px) {
+  .w_contact .contact_btn {
+    width: 20vw;
+    height: 5.3vw;
+  }
+}
+@media (max-width: 500px) {
+  .w_contact .contact_btn {
+    top: -20%;
+    width: auto;
+    height: auto;
+  }
+}
+.w_contact .contact_btn button.w_c:hover {
+  background-color: #00114c;
+  color: white;
+  transition: background-color 0.5s;
+}
+>>>>>>> Stashed changes
 .w_contact .contact_btn .w_c {
   width: 16vw;
   height: 3.3vw;

@@ -89,7 +89,58 @@
   width: 100%;
   height: 89vw;
   position: relative;
+<<<<<<< Updated upstream
+=======
+  @include g.tab {
+    height: 108vh;
+  }
 
+  @include g.tab {
+    height: 1200px;
+  }
+  @include g.ph {
+    height: 1200px;
+  }
+  @include g.sp {
+    height: 1100px;
+  }
+
+  .fluid-big {
+    position: absolute;
+    left: -153.6px;
+    width: 495px;
+    height: 412px;
+    background:#E9F2FA;/*背景色*/
+    animation: fluidrotate 8s ease 0s infinite;/*アニメーションの設定*/
+    overflow-x: hidden;
+    z-index: -1;
+    @include g.dk {
+      width: 280px;    
+    }
+
+    @include g.ph {
+     top: 0px;
+     height: 212px;
+     
+    }
+  }
+  .fluid-small {
+    position: absolute;
+    top: 65vw;
+    right: -6%;
+    width:23vh;/*横幅*/
+    height: 13vh;/*縦幅*/
+    background:#E9F2FA;/*背景色*/
+    animation: fluidrotate 15s ease 0s infinite;/*アニメーションの設定*/
+    overflow-x: hidden;
+    z-index:-1;
+>>>>>>> Stashed changes
+
+    @include g.ph {
+      height: 112px;
+      right: -13%;
+     }
+  }
   .back {
     position: absolute;
     left: -1%;
@@ -109,6 +160,17 @@
     height: 52vw;
     margin: 0 auto;
     justify-content: space-around;
+<<<<<<< Updated upstream
+=======
+    @include g.tab {
+      height: 900px;
+      width: 82vw;
+    }
+    @include g.sp {
+      height: 820px;
+      width: 100%;
+    }
+>>>>>>> Stashed changes
 
     /* 横並びに表示する */
     flex-wrap: wrap;
@@ -135,7 +197,63 @@
     }
   }
   .more_btn {
+<<<<<<< Updated upstream
     text-align: center;
+=======
+    // text-align: center;
+    // position: relative;
+
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    position: relative;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  height: 80px;
+  max-width: 250px;
+  margin: 1rem auto;
+  text-transform: uppercase;
+  border: 1px solid currentColor;
+    .btn-11 {
+      position: relative;
+      color: #29adbc;
+    }
+    .btn-11:before, .btn-11:after {
+      position: absolute;
+      top: 50%;
+      content: "";
+      width: 20px;
+      height: 20px;
+      background-color: #039eb0;
+      border-radius: 50%;
+    }
+    .btn-11:before {
+      left: -20px;
+      transform: translate(-50%, -50%);
+    }
+    .btn-11:after {
+      right: -20px;
+      transform: translate(50%, -50%);
+    }
+    .btn-11:hover {
+      color: #c0e7eb;
+    }
+    .btn-11:hover:before {
+      -webkit-animation: criss-cross-left 0.8s both;
+              animation: criss-cross-left 0.8s both;
+      -webkit-animation-direction: alternate;
+              animation-direction: alternate;
+    }
+    .btn-11:hover:after {
+      -webkit-animation: criss-cross-right 0.8s both;
+              animation: criss-cross-right 0.8s both;
+      -webkit-animation-direction: alternate;
+              animation-direction: alternate;
+    }
+
+>>>>>>> Stashed changes
     .w_btn {
       width: 12vw;
       height: 3vw;
@@ -144,6 +262,26 @@
       border: 3px solid #00114c;
       color: #050037;
       font-weight: bold;
+<<<<<<< Updated upstream
+=======
+      font-size : clamp(10px,0.83vw,16px);
+      letter-spacing : 0.9px;
+      color : #000000;
+    
+      @include g.ipd {
+        border: 2px solid #00114c;
+      }
+      @include g.tab {
+        width: 20vw;
+        height: 6vw;
+        font-size: 12px;
+      }
+      @include g.sp {
+        width: 30vw;
+        height: 8vw;
+        
+      }
+>>>>>>> Stashed changes
     }
   }
   .right_back {
@@ -167,6 +305,22 @@
   height: 80vw;
   z-index: 1;
   position: relative;
+<<<<<<< Updated upstream
+=======
+  @include g.tab {
+    height: 900px;
+  }
+  @include g.ph {
+    height: 80vh;
+  }
+  @include g.sp {
+    height: 83vh;
+  }
+  @include g.phs {
+    height:70vh;
+  }
+
+>>>>>>> Stashed changes
   .w_price_title {
     text-align: center;
     width: 100%;
@@ -193,7 +347,24 @@
     left: 0;
     right: 0;
     margin: auto;
+<<<<<<< Updated upstream
 
+=======
+    p {
+      font-family: 'TsukuARdGothic-Regular',sans-serif;
+      font-size : clamp(10px,0.63vw,12px);
+      line-height : 21.44px;
+      color : #000000;
+    
+    }
+    @include g.tab {
+      top: 18%;
+      width: 88%;
+    }
+    @include g.sp {
+      top: 20%;
+    }
+>>>>>>> Stashed changes
     .box {
       width: 31%;
       height: 50vw;
@@ -268,6 +439,27 @@
     left: 0;
     right: 0;
     margin: auto;
+<<<<<<< Updated upstream
+=======
+    @include g.tab {
+      width: 20vw;
+      height: 5.3vw;
+    }
+    @include g.sp {
+      top: -20%;
+      width: auto;
+      height: auto;
+    }
+    
+    button.w_c:hover {
+      background-color: #00114c;
+      color: white;
+      transition: background-color 0.5s;
+
+    }
+  
+
+>>>>>>> Stashed changes
     .w_c {
       width: 16vw;
       height: 3.3vw;
@@ -278,6 +470,28 @@
       font-weight: bold;
       margin-top: 7vw;
       margin-left: 0vw;
+<<<<<<< Updated upstream
+=======
+      
+      
+      @include g.ipd {
+        border: 2px solid #00114c;
+        width: 18vw;
+      }
+      @include g.tab {
+        width: 20vw;
+        height: 5.3vw;
+      }
+      @include g.sp {
+        width: 33vw;
+        height: 31px;
+        font-size: 11px;
+        border: 1px solid #00114c;
+        left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+      }
+>>>>>>> Stashed changes
     }
     .alow {
       position: relative;
