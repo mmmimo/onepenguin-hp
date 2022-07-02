@@ -1351,4 +1351,7 @@ header {
     display: none;
   }
 }
+h1 {
+  color: red;
+}
 /*# sourceMappingURL=style.css.map */
