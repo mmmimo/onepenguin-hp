@@ -1,6 +1,7 @@
-@use "../global";
+@use "../global" as g;
 @use "reset";
 
 h1 {
-    color: red;
+    color: blue;
 }
+
