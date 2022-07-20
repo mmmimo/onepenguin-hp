@@ -1,20 +1,17 @@
 .wrapper {
   width: 1280px;
-  background-color: khaki;
   margin: auto;
 }
 
 .content {
   width: 960PX;
   margin: 0 auto;
-  background-color: gold;
 }
 
 .privacy {
   width: 960px;
   max-width: 100%;
   text-align: center;
-  background-color: cadetblue;
 }
 
 .privacy-sab {
@@ -30,7 +27,6 @@
   font-size: bold;
   padding-top: 30px;
   padding-bottom: 20px;
-  background-color: aqua;
 }
 
 .privacy-sab p {
@@ -39,7 +35,6 @@
   line-height: 17.25px;
   color: #000000;
   color: rgb(0, 0, 0);
-  background-color: aquamarine;
 }
 
 .privacy1 {
@@ -50,7 +45,6 @@
   color: rgb(0, 0, 0);
   padding-left: 15%;
   padding-top: 10px;
-  background-color: lightpink;
 }
 
 .privacy1 h3 {
@@ -84,13 +78,11 @@
   color: rgb(0, 0, 0);
   padding-left: 15%;
   padding-top: 10px;
-  background-color: rgb(131, 167, 219);
 }
 
 .privacy2 h3 {
   margin-top: 20px;
   margin-bottom: 0px;
-  background-color: aqua;
 }
 
 .privacy2 ul {

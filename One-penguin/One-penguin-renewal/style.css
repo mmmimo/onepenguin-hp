@@ -542,7 +542,7 @@ header {
      object-fit: cover;
   text-align: center;
   margin-bottom: 40px;
-  margin-top: -44px;
+  margin-top: -4vw;
 }
 @media (max-width: 1024px) {
   .container .concept-img img {
@@ -1377,7 +1377,7 @@ header {
   border: 3px solid #00114c;
   color: #050037;
   font-weight: bold;
-  margin-top: 7vw;
+  margin-top: 9vw;
   margin-left: 0vw;
 }
 @media (max-width: 1024px) {
