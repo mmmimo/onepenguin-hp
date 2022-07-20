@@ -160,12 +160,12 @@ header {
 }
 @media (max-width: 1024px) {
   .container .about-main-vis {
-    height: 76vw;
+    height: 80vw;
   }
 }
 @media (max-width: 850px) {
   .container .about-main-vis {
-    height: 87vw;
+    height: 95vw;
   }
 }
 @media (max-width: 600px) {
@@ -350,11 +350,10 @@ header {
   }
 }
 .container .about-main-vis .one-pen-text-wrapper .about-one-pen-text .about-one-pen-text-box p {
-  font-size: clamp(10px, 0.83vw, 16px);
+  font-size: clamp(12px, 0.83vw, 16px);
   color: #000000;
   font-family: "TsukuARdGothic-Regular", sans-serif;
-  -ms-writing-mode: tb-rl;
-      writing-mode: vertical-rl;
+  writing-mode: vertical-rl;
   text-align: initial;
   font-weight: bold;
   margin: 0 auto;
@@ -362,8 +361,7 @@ header {
 }
 @media (max-width: 600px) {
   .container .about-main-vis .one-pen-text-wrapper .about-one-pen-text .about-one-pen-text-box p {
-    -ms-writing-mode: inherit;
-        writing-mode: inherit;
+    writing-mode: inherit;
   }
 }
 .container .about-main-vis .one-pen-text-wrapper .about-one-pen-text .about-one-pen-text-box p .one-pen-big-text {
@@ -412,11 +410,9 @@ header {
   left: -153.6px;
   width: 495px;
   height: 412px;
-  background: #E9F2FA;
-  /*背景色*/
+  background: #E9F2FA; /*背景色*/
   -webkit-animation: fluidrotate 8s ease 0s infinite;
-          animation: fluidrotate 8s ease 0s infinite;
-  /*アニメーションの設定*/
+          animation: fluidrotate 8s ease 0s infinite; /*アニメーションの設定*/
   overflow-x: hidden;
   z-index: 9;
 }
@@ -435,15 +431,11 @@ header {
   position: absolute;
   top: 227px;
   right: -6%;
-  width: 20vh;
-  /*横幅*/
-  height: 10vh;
-  /*縦幅*/
-  background: #E9F2FA;
-  /*背景色*/
+  width: 20vh; /*横幅*/
+  height: 10vh; /*縦幅*/
+  background: #E9F2FA; /*背景色*/
   -webkit-animation: fluidrotate 15s ease 0s infinite;
-          animation: fluidrotate 15s ease 0s infinite;
-  /*アニメーションの設定*/
+          animation: fluidrotate 15s ease 0s infinite; /*アニメーションの設定*/
   overflow-x: hidden;
   z-index: 9;
 }
@@ -512,7 +504,7 @@ header {
   }
 }
 .container .about-concept {
-  height: 500px;
+  height: auto;
   width: 100%;
 }
 @media (max-width: 600px) {
@@ -533,6 +525,16 @@ header {
   z-index: 10;
   position: relative;
 }
+@media (max-width: 794px) {
+  .container .concept-img {
+    height: 400px;
+  }
+}
+@media (max-width: 600px) {
+  .container .concept-img {
+    height: 500px;
+  }
+}
 .container .concept-img img {
   width: 8.75%;
   height: auto;
@@ -540,11 +542,17 @@ header {
      object-fit: cover;
   text-align: center;
   margin-bottom: 40px;
-  margin-top: -44px;
+  margin-top: -4vw;
 }
 @media (max-width: 1024px) {
   .container .concept-img img {
-    width: 8.75%;
+    width: 12%;
+  }
+}
+@media (max-width: 794px) {
+  .container .concept-img img {
+    width: 12%;
+    margin-bottom: 0px;
   }
 }
 @media (max-width: 600px) {
@@ -565,7 +573,7 @@ header {
   margin-top: 0px;
 }
 .container .concept-img p {
-  font-size: clamp(13px, 0.83vw, 16px);
+  font-size: clamp(12px, 0.83vw, 16px);
   line-height: 25px;
   color: #152041;
   font-weight: bold;
@@ -597,7 +605,7 @@ header {
 @media (max-width: 600px) {
   .container .about-company .about-company-title {
     width: 60%;
-    margin-bottom: 23.77vw;
+    margin-bottom: 30vw;
   }
 }
 .container .about-company .about-company-title img {
@@ -627,7 +635,7 @@ header {
 }
 @media (max-width: 600px) {
   .container .about-company .company-content img {
-    transform: scale(1.4);
+    transform: scale(1.6);
   }
 }
 .container .about-contact-us-contents {
@@ -724,6 +732,26 @@ header {
     width: 92%;
   }
 }
+@media (max-width: 600px) {
+  .container .about-contact-us .w_contact {
+    height: auto;
+    margin-top: 150px;
+  }
+}
+@media (max-width: 600px) {
+  .container .about-contact-us .w_contact .w_contact_text {
+    margin-top: 1vw;
+  }
+}
+.container .about-contact-us .w_contact .contact_btn {
+  top: 40%;
+}
+@media (max-width: 600px) {
+  .container .about-contact-us .w_contact .contact_btn .w_c {
+    margin-top: 60px;
+    width: 150px;
+  }
+}
 .container .sub-footer {
   width: 100%;
   height: auto;
@@ -731,7 +759,6 @@ header {
 .container .sub-footer img {
   width: 100%;
   height: auto;
-  margin-top: 200px;
 }
 @media (max-width: 600px) {
   .container .sub-footer img {
@@ -755,11 +782,11 @@ header {
 
 .w_main {
   width: 100%;
-  height: 66vw;
+  height: auto;
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .w_main {
-    height: 400px;
+    height: auto;
   }
 }
 .w_main .w_main_top {
@@ -874,25 +901,27 @@ header {
   width: 100%;
   height: 89vw;
   position: relative;
+  margin-bottom: 200px;
 }
-@media (max-width: 794px) {
+@media (max-width: 1240px) {
   .w_works {
-    height: 108vh;
+    height: 100vh;
+  }
+}
+@media (max-width: 1000px) {
+  .w_works {
+    height: 1000px;
   }
 }
 @media (max-width: 794px) {
   .w_works {
-    height: 1200px;
-  }
-}
-@media (max-width: 600px) {
-  .w_works {
-    height: 1200px;
+    height: auto;
+    margin-bottom: 150px;
   }
 }
 @media (max-width: 500px) {
   .w_works {
-    height: 1200px;
+    height: auto;
   }
 }
 .w_works .back {
@@ -927,18 +956,19 @@ header {
   height: 52vw;
   margin: 0 auto;
   justify-content: space-around;
+  max-width: 1050px;
   /* 横並びに表示する */
   flex-wrap: wrap;
 }
 @media (max-width: 794px) {
   .w_works .ex_wrapper {
-    height: 900px;
+    height: auto;
     width: 82vw;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .w_works .ex_wrapper {
-    height: 950px;
+    height: auto;
     width: 100%;
   }
 }
@@ -953,8 +983,8 @@ header {
 .w_works .ex_wrapper .w_works_ex {
   text-align: center;
   width: 33%;
-  height: 18vw;
   font-size: 0.6vw;
+  margin-bottom: 92px;
 }
 @media (max-width: 794px) {
   .w_works .ex_wrapper .w_works_ex {
@@ -963,7 +993,7 @@ header {
 }
 @media (max-width: 794px) {
   .w_works .ex_wrapper .w_works_ex {
-    height: 40vw;
+    height: auto;
   }
 }
 @media (max-width: 500px) {
@@ -976,6 +1006,7 @@ header {
   height: 15vw;
   -o-object-fit: contain;
      object-fit: contain;
+  max-width: 280px;
 }
 @media (max-width: 794px) {
   .w_works .ex_wrapper .w_works_ex img {
@@ -1012,6 +1043,7 @@ header {
 .w_works .more_btn .w_btn {
   position: absolute;
   left: 50%;
+  top: 80px;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
@@ -1059,18 +1091,26 @@ header {
   height: 16vw;
   -o-object-fit: contain;
      object-fit: contain;
+  margin-top: 300px;
 }
-@media (max-width: 850px) {
+@media (max-width: 1240px) {
+  .w_works .w_p {
+    margin-top: 400px;
+  }
+}
+@media (max-width: 794px) {
   .w_works .w_p {
     left: 5%;
     width: 50vw;
+    margin-top: 0px;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .w_works .w_p {
     left: -4%;
     width: 150px;
     height: 100px;
+    margin-top: 0px;
   }
 }
 
@@ -1087,17 +1127,17 @@ header {
 }
 @media (max-width: 600px) {
   .w_price {
-    height: 80vh;
+    height: auto;
   }
 }
 @media (max-width: 500px) {
   .w_price {
-    height: 75vh;
+    height: auto;
   }
 }
 @media (max-width: 400px) {
   .w_price {
-    height: 62vh;
+    height: auto;
   }
 }
 .w_price .w_price_title {
@@ -1106,14 +1146,16 @@ header {
   height: 33vw;
   background-color: #f0f0f0;
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .w_price .w_price_title {
-    height: 13vh;
+    height: auto;
+    margin-bottom: 0px;
   }
 }
 @media (max-width: 500px) {
   .w_price .w_price_title {
-    height: 14vh;
+    height: auto;
+    margin-bottom: 0px;
   }
 }
 .w_price .w_price_title img {
@@ -1162,9 +1204,9 @@ header {
     width: 88%;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .w_price .w_price_wrapper {
-    top: 19%;
+    position: relative;
   }
 }
 .w_price .w_price_wrapper .box {
@@ -1194,7 +1236,7 @@ header {
 }
 @media (max-width: 794px) {
   .w_price .w_contact_wrapper {
-    height: 65vw;
+    height: auto;
   }
 }
 .w_price .w_contact_wrapper .pcs {
@@ -1226,19 +1268,29 @@ header {
   font-style: normal;
   font-weight: 700;
   width: 100%;
-  height: 25vw;
+  height: auto;
+}
+@media (max-width: 600px) {
+  .w_contact {
+    margin-top: 250px;
+  }
+}
+@media (max-width: 500px) {
+  .w_contact {
+    margin-top: 240px;
+  }
 }
 .w_contact .w_contact_text {
   width: 58%;
   margin: 0 auto;
   margin-top: 13.5vw;
 }
-@media (max-width: 794px) {
+@media (max-width: 1024px) {
   .w_contact .w_contact_text {
     width: 83%;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .w_contact .w_contact_text {
     margin-top: -44px;
     left: 50%;
@@ -1248,13 +1300,23 @@ header {
   }
 }
 .w_contact .w_title {
-  font-size: 1.5vw;
+  font-size: clamp(12px, 1.5vw, 18px);
   margin: 0.4vw 0;
 }
+@media (max-width: 600px) {
+  .w_contact .w_title {
+    font-size: 17px;
+  }
+}
 .w_contact .w_sub_title {
-  font-size: 1vw;
+  font-size: clamp(12px, 1vw, 18px);
   margin: 0.4vw 0;
   font-weight: normal;
+}
+@media (max-width: 600px) {
+  .w_contact .w_sub_title {
+    font-size: 12px;
+  }
 }
 .w_contact .w_long {
   position: absolute;
@@ -1276,9 +1338,8 @@ header {
   left: -2%;
   z-index: -2;
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .w_contact .long {
-    height: 27vw;
     -o-object-fit: contain;
        object-fit: contain;
     left: -42%;
@@ -1316,22 +1377,23 @@ header {
   border: 3px solid #00114c;
   color: #050037;
   font-weight: bold;
-  margin-top: 7vw;
+  margin-top: 9vw;
   margin-left: 0vw;
 }
 @media (max-width: 1024px) {
   .w_contact .contact_btn .w_c {
     border: 2px solid #00114c;
-    width: 18vw;
+    width: 200px;
+    height: 40px;
   }
 }
 @media (max-width: 794px) {
   .w_contact .contact_btn .w_c {
-    width: 20vw;
-    height: 5.3vw;
+    width: 200px;
+    height: 40px;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .w_contact .contact_btn .w_c {
     width: 33vw;
     height: 31px;
@@ -1352,6 +1414,6 @@ header {
   }
 }
 h1 {
-  color: red;
+  color: blue;
 }
 /*# sourceMappingURL=style.css.map */

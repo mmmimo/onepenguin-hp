@@ -12,9 +12,9 @@
 }
 .w_main {
   width: 100%;
-  height: 66vw;
-  @include g.sp {
-    height: 400px;
+  height: auto;
+  @include g.ph {
+    height: auto;
   }
   .w_main_top {
     background-color: #f0f0f0;
@@ -117,18 +117,21 @@
   width: 100%;
   height: 89vw;
   position: relative;
-  @include g.tab {
-    height: 108vh;
+  margin-bottom: 200px;
+  
+  @include g.lp {
+    height: 100vh;
   }
+  @include g.desktop {
+    height: 1000px;
+  }
+  @include g.tab {
+    height: auto;
+    margin-bottom: 150px;
 
-  @include g.tab {
-    height: 1200px;
-  }
-  @include g.ph {
-    height: 1200px;
   }
   @include g.sp {
-    height: 1200px;
+    height: auto;
   }
 
   .back {
@@ -159,12 +162,13 @@
     height: 52vw;
     margin: 0 auto;
     justify-content: space-around;
+    max-width: 1050px;
     @include g.tab {
-      height: 900px;
+      height: auto;
       width: 82vw;
     }
-    @include g.sp {
-      height: 950px;
+    @include g.ph {
+      height: auto;
       width: 100%;
     }
 
@@ -180,13 +184,13 @@
     .w_works_ex {
       text-align: center;
       width: 33%;
-      height: 18vw;
       font-size: 0.6vw;
+      margin-bottom: 92px;
       @include g.tab {
         width: 50%;
       }
       @include g.tab {
-        height: 40vw;
+        height: auto;
       }
       @include g.sp {
         height: auto;      
@@ -195,6 +199,7 @@
         width: 15vw;
         height: 15vw;
         object-fit: contain;
+        max-width: 280px;
         @include g.tab {
           height: 25vw;
           width: 25vw;
@@ -230,6 +235,7 @@
     .w_btn {
       position: absolute;
       left: 50%;
+      top: 80px;
       transform: translate(-50%, -50%);
       -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
@@ -272,15 +278,22 @@
     width: 16vw;
     height: 16vw;
     object-fit: contain;
+    margin-top: 300px;
 
-    @include g.id {
+    @include g.lp {
+      margin-top: 400px;
+    }
+
+    @include g.tab {
     left: 5%;
     width: 50vw;
+    margin-top: 0px;
     }
-    @include g.sp {
+    @include g.ph {
       left: -4%;
     width: 150px;
     height: 100px;
+    margin-top: 0px;
     }
 
   }
@@ -295,13 +308,13 @@
     height: 900px;
   }
   @include g.ph {
-    height: 80vh;
+    height: auto;
   }
   @include g.sp {
-    height: 75vh;
+    height: auto;
   }
   @include g.phs {
-    height:62vh;
+    height:auto;
   }
 
   .w_price_title {
@@ -309,11 +322,14 @@
     width: 100%;
     height: 33vw;
     background-color: #f0f0f0;
-    @include g.sp {
-      height: 13vh;
+    @include g.ph {
+      height: auto;
+      margin-bottom: 0px;
     }
     @include g.sp {
-      height: 14vh;
+      height: auto;
+      margin-bottom: 0px;
+
     }
     img {
       width: 10vw;
@@ -355,8 +371,8 @@
       top: 18%;
       width: 88%;
     }
-    @include g.sp {
-      top: 19%;
+    @include g.ph {
+      position: relative;
     }
     .box {
       width: 31%;
@@ -381,7 +397,7 @@
     height: 53vw;
     position: relative;
     @include g.tab {
-      height: 65vw;
+      height: auto;
     }
 
     .pcs {
@@ -410,15 +426,22 @@
   font-style: normal;
   font-weight: 700;
   width: 100%;
-  height: 25vw;
+  height: auto;
+  @include g.ph {
+  margin-top: 250px;
+  }
+  @include g.sp {
+    margin-top: 240px;
+  }
+
   .w_contact_text {
     width: 58%;
     margin: 0 auto;
     margin-top: 13.5vw;
-    @include g.tab {
+    @include g.ipd {
       width: 83%;
     }
-    @include g.sp {
+    @include g.ph {
       margin-top: -44px;
       left: 50%;
       transform: translateX(-50%);
@@ -427,13 +450,19 @@
       }
       }
   .w_title {
-    font-size: 1.5vw;
+    font-size : clamp(12px,1.5vw,18px);
     margin: 0.4vw 0;
+    @include g.ph {
+      font-size: 17px;
+    }
   }
   .w_sub_title {
-    font-size: 1vw;
+    font-size : clamp(12px,1vw,18px);
     margin: 0.4vw 0;
     font-weight: normal;
+    @include g.ph {
+      font-size: 12px;
+    }
   }
   .w_long {
     position: absolute;
@@ -451,8 +480,7 @@
     object-fit: contain;
     left: -2%;
     z-index: -2;
-    @include g.sp {
-      height: 27vw;
+    @include g.ph {
       object-fit: contain;
     left: -42%;
     z-index: -2;
@@ -484,17 +512,18 @@
       border: 3px solid #00114c;
       color: #050037;
       font-weight: bold;
-      margin-top: 7vw;
+      margin-top: 9vw;
       margin-left: 0vw;
       @include g.ipd {
         border: 2px solid #00114c;
-        width: 18vw;
+        width: 200px;
+        height: 40px;
       }
       @include g.tab {
-        width: 20vw;
-        height: 5.3vw;
+        width: 200px;
+        height: 40px;
       }
-      @include g.sp {
+      @include g.ph {
         width: 33vw;
         height: 31px;
         font-size: 11px;
