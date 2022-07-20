@@ -57,10 +57,10 @@
   display: block;
   height: 70vw;
   @include g.ipd {
-    height: 76vw;
+    height: 80vw;
   }
   @include g.id {
-    height: 87vw;
+    height: 95vw;
   }
   @include g.ph {
     height: 1200px;
@@ -239,7 +239,7 @@ display: none;
     left: 50%;
     }
     p {
-      font-size : clamp(10px,0.83vw,16px);
+      font-size : clamp(12px,0.83vw,16px);
       color: #000000;
       font-family: 'TsukuARdGothic-Regular',sans-serif;
       writing-mode: vertical-rl;
@@ -366,7 +366,7 @@ display: none;
 }
  // ________________section_________________
 .about-concept {
-  height: 500px;
+  height: auto;
 width: 100%;
 
 @include g.dk {
@@ -386,7 +386,13 @@ width: 100%;
   text-align: center;
   z-index: 10;
   position: relative;
+  @include g.tab {
+    height: 400px;
 
+  }
+  @include g.ph {
+    height: 500px;
+  }
 
 
   img {
@@ -398,8 +404,14 @@ width: 100%;
   margin-top: -44px;
 
   @include g.ipd {
-    width: 8.75%;
+    width: 12%;
   }
+  @include g.tab {
+    width: 12%;
+    margin-bottom: 0px;
+
+  }
+
   @include g.ph {
   width: 100px;
   }
@@ -418,7 +430,7 @@ width: 100%;
   margin-top: 0px;
 }
   p{
-    font-size : clamp(13px,0.83vw,16px);
+    font-size : clamp(12px,0.83vw,16px);
     line-height : 25px;
     color : #152041;
     font-weight: bold;
@@ -456,7 +468,7 @@ width: 100%;
 
     @include g.ph {
       width: 60%;
-      margin-bottom: 23.77vw;
+      margin-bottom: 30vw;
     }
     img {
       width: auto;
@@ -481,7 +493,7 @@ width: 100%;
       width: 100%;
      }
      @include g.ph {
-      transform: scale(1.4);
+      transform: scale(1.6);
     }
     }
   }
@@ -638,6 +650,36 @@ width: 100%;
 
 }
 
+.about-contact-us {
+
+.w_contact {
+  @include g.ph {
+height: auto;
+margin-top: 150px;
+  }
+
+.w_contact_text {
+  @include g.ph {
+  margin-top: 1vw;
+}
+}
+
+.contact_btn {
+  top: 40%;
+  .w_c {
+    @include g.ph {
+    margin-top: 60px;
+    width: 150px;
+
+  }
+}
+
+}
+
+}
+}
+
+
 .sub-footer {
 
   width: 100%;
@@ -645,7 +687,6 @@ width: 100%;
   img {
     width: 100%;
   height: auto;
-  margin-top: 200px;
 
   @include g.ph {
     margin-top: 0px;
