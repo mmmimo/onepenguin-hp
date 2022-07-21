@@ -16,77 +16,135 @@
   @include g.ph {
     height: auto;
   }
+
+  .w_main_b {
+    background-color: #f0f0f0;
+    padding-bottom: 46px;
+    @include g.ph {
+      padding-bottom: 50px;
+    }
+
+
   .w_main_top {
     background-color: #f0f0f0;
     width: 100%;
-    height: 26vw;
+    height: auto;
     display: flex;
     position: relative;
+    max-width: 1280px;
+    margin: auto;
+    @include g.lp {
+      width: 85%;
+    }
+
     .penguin {
       position: absolute;
-      bottom: -30%;
-      left: 5%;
-      height: 17vw;
-      width: 29vw;
+      bottom: -144px;
+      left: 146px;
+      height: auto;
+      width: 214px;
       object-fit: contain;
+      @include g.lp {
+        width: 150px;
+        bottom: -100px;
+      }
+      @include g.ipd {
+        left: 60px;
+        left: 0px;
+
+      }
+      @include g.tab{
+        bottom: 0px;
+        left: 60px;
+      }
+      @include g.ph {
+        bottom: 0px;
+        left: 30px;
+        width: 120px;
+      }
+      @include g.sp {
+        left: auto;
     }
+  }
     .right {
-      width: 35vw;
-      height: 20vw;
+      width: 432px;
+      height: auto;
       object-fit: contain;
       margin: 0 auto;
-      margin-top: 3vw;
+      margin-top: 40px;
+      margin-left: 130px;
+      @include g.lp {
+        margin-left: 50px;
+      }
+      @include g.ipd {
+        width: 35vw;
+      }
+      @include g.tab {
+        display: none;
+      }
 
       @include g.sp {
         display: none;
       }
     }
   }
+}
 
   h1 {
-    font-size: 2vw;
+    font-size: 30px;
     color: #050037;
     font-family: 'TsukuARdGothic-Regular',sans-serif;
     font-style: normal;
     font-weight: 700;
-    margin-top: 4vw;
-    margin-left: 20vw;
-    line-height: 4vw;
-    letter-spacing: 0.2vw;
+    margin-top: 50px;
+    margin-left: 250px;
+    line-height: 48px;
+    letter-spacing: 0.1vw;
+    font-feature-settings: "palt";
+    @include g.lp {
+      margin-left: 150px;
+    }
 
-    @include g.sp {
-      font-size: 3.5vw;
-      margin-top: 6vw;
-      margin-left: 33vw;
-      line-height: 5vw;
+    @include g.ipd {
+      font-size: 19px;
+    }
+    @include g.tab {
+      margin-left: 45vw;
+    }
+    @include g.ph {
+      font-size: 14px;
+      margin-left: 40vw;
     }
   }
   .w_main_under {
     text-align: center;
     position: relative;
-    height: 28.5vw;
+    height: auto;
     width: 100%;
     @include g.sp {
       height: auto;
     }
     .policy {
-      width: 30vw;
-      height: 20vw;
+      width: 350px;
+      height: auto;
       object-fit: contain;
-      margin-top: -2%;
+      margin-top: 65px;
+      margin-bottom: 45px;
       @include g.sp {
         width: 44vw;
         height: 30vw;
       }
     }
     h2 {
-      margin-top: -3%;
-      font-size: 1.35vw;
+      font-size: 20px;
       color: #050037;
       font-family: 'TsukuARdGothic-Regular',sans-serif;
       font-style: normal;
       font-weight: 700;
       line-height: 2.7vw;
+      font-feature-settings: "palt";
+      margin-bottom: 70px;
+
       @include g.tab {
       }
       @include g.sp {
@@ -115,7 +173,7 @@
 }
 .w_works {
   width: 100%;
-  height: 89vw;
+  height: auto;
   position: relative;
   margin-bottom: 200px;
   
@@ -141,9 +199,12 @@
   }
   .w_works_title {
     text-align: center;
+    margin-top: 44px;
+    margin-bottom: 30px;
+
     .title {
-      width: 11vw;
-      height: 11vw;
+      width: 140px;
+      height:auto;
       object-fit: contain;
       @include g.tab {
         width: 17vw;
@@ -162,7 +223,7 @@
     height: 52vw;
     margin: 0 auto;
     justify-content: space-around;
-    max-width: 1050px;
+    max-width: 875px;
     @include g.tab {
       height: auto;
       width: 82vw;
@@ -196,8 +257,8 @@
         height: auto;      
       }
       img {
-        width: 15vw;
-        height: 15vw;
+        width: 200px;
+        height: 258px;
         object-fit: contain;
         max-width: 280px;
         @include g.tab {
