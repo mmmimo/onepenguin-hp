@@ -175,7 +175,7 @@
   width: 100%;
   height: auto;
   position: relative;
-  margin-bottom: 200px;
+  margin-bottom: 285px;
   
   @include g.lp {
     height: 100vh;
@@ -220,7 +220,7 @@
   .ex_wrapper {
     display: flex;
     width: 68vw;
-    height: 52vw;
+    height: auto;
     margin: 0 auto;
     justify-content: space-around;
     max-width: 875px;
@@ -335,11 +335,11 @@
   }
   .w_p {
     position: absolute;
-    left: 25%;
-    width: 16vw;
-    height: 16vw;
+    left: 27%;
+    width: 207px;
+    height: auto;
     object-fit: contain;
-    margin-top: 300px;
+    margin-top: 105px;
 
     @include g.lp {
       margin-top: 400px;
