@@ -16,6 +16,11 @@
 }
 
 // ______________________________________________
+@mixin b17 {
+    @media (max-width: 1700px) {
+        @content;
+    }
+}
 
 @mixin dk {
     @media (max-width: 1500px) {
