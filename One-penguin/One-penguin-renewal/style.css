@@ -738,13 +738,56 @@ header {
     margin-top: 150px;
   }
 }
+.container .about-contact-us .w_contact .w_contact_text {
+  margin-top: 100px;
+}
+@media (max-width: 1500px) {
+  .container .about-contact-us .w_contact .w_contact_text {
+    margin-top: 150px;
+  }
+}
+@media (max-width: 1240px) {
+  .container .about-contact-us .w_contact .w_contact_text {
+    margin-top: 100px;
+  }
+}
 @media (max-width: 600px) {
   .container .about-contact-us .w_contact .w_contact_text {
     margin-top: 1vw;
   }
 }
+.container .about-contact-us .w_contact .w_long {
+  margin-top: -60px;
+}
+.container .about-contact-us .w_contact .w_long .long {
+  margin-top: 60px;
+  max-width: inherit;
+}
+@media (max-width: 1500px) {
+  .container .about-contact-us .w_contact .w_long .long {
+    margin-top: 0px;
+  }
+}
 .container .about-contact-us .w_contact .contact_btn {
-  top: 40%;
+  top: 62%;
+}
+@media (max-width: 1500px) {
+  .container .about-contact-us .w_contact .contact_btn {
+    top: 74%;
+  }
+}
+@media (max-width: 1240px) {
+  .container .about-contact-us .w_contact .contact_btn {
+    top: 108%;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
+@media (max-width: 1240px) {
+  .container .about-contact-us .w_contact .contact_btn .w_c {
+    width: 200px;
+  }
 }
 @media (max-width: 600px) {
   .container .about-contact-us .w_contact .contact_btn .w_c {

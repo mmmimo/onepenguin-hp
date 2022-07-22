@@ -659,18 +659,45 @@ margin-top: 150px;
   }
 
 .w_contact_text {
+  margin-top: 100px;
+  @include g.dk {
+  margin-top: 150px;
+  }
+  @include g.lp {
+    margin-top: 100px;
+    }
   @include g.ph {
   margin-top: 1vw;
 }
 }
+.w_long {
+margin-top: -60px;
+
+.long { 
+  margin-top: 60px;
+  max-width: inherit;
+  @include g.dk {
+    margin-top: 0px;
+  }
+}
+}
 
 .contact_btn {
-  top: 40%;
+  top: 62%;
+  @include g.dk {
+    top: 74%;
+  }
+  @include g.lp {
+    top: 108%;
+    width: fit-content;
+  }
   .w_c {
+    @include g.lp {
+      width: 200px;
+    }
     @include g.ph {
     margin-top: 60px;
     width: 150px;
-
   }
 }
 
