@@ -156,7 +156,12 @@ header {
 }
 .container .about-main-vis {
   display: block;
-  height: 70vw;
+  height: 60vw;
+}
+@media (max-width: 1500px) {
+  .container .about-main-vis {
+    height: 70vw;
+  }
 }
 @media (max-width: 1024px) {
   .container .about-main-vis {
@@ -175,10 +180,15 @@ header {
 }
 .container .about-main-vis .main-vis-wrapper {
   width: 100%;
-  height: 35vw;
+  height: 600px;
   text-align: center;
   display: flex;
   position: relative;
+}
+@media (max-width: 1500px) {
+  .container .about-main-vis .main-vis-wrapper {
+    height: 35vw;
+  }
 }
 @media (max-width: 600px) {
   .container .about-main-vis .main-vis-wrapper {
@@ -201,6 +211,7 @@ header {
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   width: 67.19%;
+  max-width: 1000px;
 }
 @media (max-width: 1024px) {
   .container .about-main-vis .main-vis-wrapper .about-one-pen-vis .main-vis-img {
@@ -223,7 +234,7 @@ header {
   }
 }
 .container .about-main-vis .main-vis-wrapper .about-one-pen-vis .main-vis-text {
-  left: 7%;
+  left: 14%;
   top: 14%;
   position: absolute;
 }
@@ -246,6 +257,32 @@ header {
 @media (max-width: 600px) {
   .container .about-main-vis .main-vis-wrapper .about-one-pen-vis .main-vis-text {
     display: none;
+  }
+}
+.container .about-main-vis .main-vis-wrapper .about-one-pen-vis .text__slideIn {
+  -webkit-animation: slideIn 1.6s;
+          animation: slideIn 1.6s;
+  -webkit-animation-delay: 1.6s;
+          animation-delay: 1.6s;
+}
+@-webkit-keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 .container .about-main-vis .main-vis-wrapper .about-one-pen-vis .sp-main-vis {
@@ -271,6 +308,11 @@ header {
   left: 95%;
   top: 70px;
 }
+@media (max-width: 1240px) {
+  .container .about-main-vis .main-vis-wrapper .share {
+    display: none;
+  }
+}
 .container .about-main-vis .main-vis-wrapper .share img {
   width: auto;
   height: auto;
@@ -288,6 +330,11 @@ header {
   top: -7%;
   left: -4px;
 }
+@media (max-width: 1240px) {
+  .container .about-main-vis .main-vis-wrapper .share .share-icon {
+    display: none;
+  }
+}
 .container .about-main-vis .main-vis-wrapper .share .share-icon .share-icon-twi {
   top: 18%;
   position: absolute;
@@ -298,9 +345,14 @@ header {
 }
 .container .about-main-vis .one-pen-text-wrapper {
   width: 100%;
-  height: 35vw;
+  height: auto;
   text-align: center;
   position: relative;
+}
+@media (max-width: 1500px) {
+  .container .about-main-vis .one-pen-text-wrapper {
+    height: 35vw;
+  }
 }
 @media (max-width: 600px) {
   .container .about-main-vis .one-pen-text-wrapper {
@@ -358,10 +410,83 @@ header {
   font-weight: bold;
   margin: 0 auto;
   line-height: 24px;
+  /*左右のアニメーション*/
 }
 @media (max-width: 600px) {
   .container .about-main-vis .one-pen-text-wrapper .about-one-pen-text .about-one-pen-text-box p {
     writing-mode: inherit;
+  }
+}
+.container .about-main-vis .one-pen-text-wrapper .about-one-pen-text .about-one-pen-text-box p .slide-in {
+  overflow: hidden;
+  display: inline-block;
+}
+.container .about-main-vis .one-pen-text-wrapper .about-one-pen-text .about-one-pen-text-box p .slide-in_inner {
+  display: inline-block;
+}
+.container .about-main-vis .one-pen-text-wrapper .about-one-pen-text .about-one-pen-text-box p .rightAnime {
+  opacity: 0; /*事前に透過0にして消しておく*/
+}
+.container .about-main-vis .one-pen-text-wrapper .about-one-pen-text .about-one-pen-text-box p .slideAnimeLeftRight {
+  -webkit-animation-name: slideTextX100;
+          animation-name: slideTextX100;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+  -webkit-animation-delay: 1.6s;
+          animation-delay: 1.6s;
+}
+@-webkit-keyframes slideTextX100 {
+  from {
+    transform: translateX(-100%); /*要素を左の枠外に移動*/
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0); /*要素を元の位置に移動*/
+    opacity: 1;
+  }
+}
+@keyframes slideTextX100 {
+  from {
+    transform: translateX(-100%); /*要素を左の枠外に移動*/
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0); /*要素を元の位置に移動*/
+    opacity: 1;
+  }
+}
+.container .about-main-vis .one-pen-text-wrapper .about-one-pen-text .about-one-pen-text-box p .slideAnimeRightLeft {
+  -webkit-animation-name: slideTextX-100;
+          animation-name: slideTextX-100;
+  -webkit-animation-duration: 1.6s;
+          animation-duration: 1.6s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+  -webkit-animation-delay: 1.6s;
+          animation-delay: 1.6s;
+}
+@-webkit-keyframes slideTextX-100 {
+  from {
+    transform: translateX(100%); /*要素を右の枠外に移動*/
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0); /*要素を元の位置に移動*/
+    opacity: 1;
+  }
+}
+@keyframes slideTextX-100 {
+  from {
+    transform: translateX(100%); /*要素を右の枠外に移動*/
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0); /*要素を元の位置に移動*/
+    opacity: 1;
   }
 }
 .container .about-main-vis .one-pen-text-wrapper .about-one-pen-text .about-one-pen-text-box p .one-pen-big-text {
@@ -512,11 +637,6 @@ header {
     margin-top: -80px;
   }
 }
-@media (max-width: 400px) {
-  .container .about-concept {
-    margin-top: -120px;
-  }
-}
 .container .concept-img {
   width: 100%;
   height: 500px;
@@ -558,6 +678,7 @@ header {
 @media (max-width: 600px) {
   .container .concept-img img {
     width: 100px;
+    margin-top: -8vw;
   }
 }
 .container .concept-img .po-re {
@@ -1592,7 +1713,7 @@ header {
   height: auto;
   border-radius: 1vh;
   background-color: white;
-  border: 3px solid #00114c;
+  border: 2px solid #00114c;
   color: #050037;
   font-weight: bold;
   margin-left: 0vw;
