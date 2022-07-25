@@ -1,6 +1,6 @@
 //logoの表示
 jQuery(window).on('load',function(){
-    $("#splash").delay(1500).fadeOut('slow');//ローディング画面を1.5秒（1500ms）待機してからフェードアウト
+    $("#splash").delay(1300).fadeOut('slow');//ローディング画面を1.5秒（1500ms）待機してからフェードアウト
     $("#splash_logo").delay(1200).fadeOut('slow');//ロゴを1.2秒（1200ms）待機してからフェードアウト
   });
 
@@ -27,7 +27,7 @@ jQuery(window).on('load',function(){
               }
               });
     }
-    
+  
     // 画面をスクロールをしたら動かしたい場合の記述
     $(window).scroll(function (){
       slideAnime();/* アニメーション用の関数を呼ぶ*/
@@ -38,3 +38,30 @@ jQuery(window).on('load',function(){
       slideAnime();/* アニメーション用の関数を呼ぶ*/
     });// ここまで画面が読み込まれたらすぐに動かしたい場合の記述
 
+
+
+  // 「テキストアニメーション2」
+// blurTriggerにblurというクラス名を付ける定義
+
+function BlurTextAnimeControl() {
+	$('.blurTrigger').each(function(){ //blurTriggerというクラス名が
+		var elemPos = $(this).offset().top;//要素より、50px上の
+		var scroll = $(window).scrollTop();
+		var windowHeight = $(window).height();
+		if ( scroll >= elemPos - windowHeight){
+		$(this).addClass('blur');// 画面内に入ったらblurというクラス名を追記
+		}
+		});
+}
+
+
+
+// 画面をスクロールをしたら動かしたい場合の記述
+$(window).scroll(function () {
+	BlurTextAnimeControl();/* アニメーション用の関数を呼ぶ*/
+});// ここまで画面をスクロールをしたら動かしたい場合の記述
+
+// 画面が読み込まれたらすぐに動かしたい場合の記述
+$(window).on('load', function () {
+	BlurTextAnimeControl();/* アニメーション用の関数を呼ぶ*/
+});// ここまで画面が読み込まれたらすぐに動かしたい場合の記述
