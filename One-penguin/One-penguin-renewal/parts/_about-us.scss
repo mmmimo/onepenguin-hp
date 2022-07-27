@@ -55,7 +55,11 @@
 
 .about-main-vis {  // ________________container_________________
   display: block;
-  height: 70vw;
+  height: 60vw;
+  @include g.dk {
+    height: 70vw
+  }
+
   @include g.ipd {
     height: 80vw;
   }
@@ -69,10 +73,13 @@
 
 .main-vis-wrapper { // ________________section_________________
   width: 100%;
-  height: 35vw;
+  height: 600px;
   text-align: center;
   display: flex;
   position: relative;
+  @include g.dk {
+    height: 35vw;
+  }
 
   @include g.ph {
     margin-bottom: 0px;
@@ -96,6 +103,8 @@
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     width: 67.19%;
+    max-width: 1000px;
+
     @include g.ipd {
       width: 80%;
         }
@@ -115,7 +124,7 @@
   }
 
   .main-vis-text {
-    left: 7%;
+    left: 14%;
     top: 14%;
     position:absolute;
     @include g.dk {
@@ -134,6 +143,21 @@
 display: none;
 }
 
+  }
+  .text__slideIn {
+    animation: slideIn 1.6s ;
+    animation-delay: 1.6s;
+
+  }
+  @keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateX(100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
   }
 
   .sp-main-vis {
@@ -157,6 +181,10 @@ display: none;
   display: block;
   left: 95%;
   top: 70px;
+  @include g.lp {
+    display: none;
+  }
+  
 
   img {
     width: auto;
@@ -176,7 +204,9 @@ display: none;
   z-index: 10;
   top: -7%;
   left: -4px;
-
+  @include g.lp {
+    display: none;
+  }
 
     .share-icon-twi {
       top: 18%;
@@ -193,9 +223,12 @@ display: none;
 
 .one-pen-text-wrapper {
   width: 100%;
-    height: 35vw;
+    height: auto;
     text-align: center;
     position: relative;
+    @include g.dk {
+      height: 35vw;
+    }
   @include g.ph {
     top: 100px;  
   }
@@ -238,6 +271,7 @@ display: none;
     top: 0%;
     left: 50%;
     }
+    
     p {
       font-size : clamp(12px,0.83vw,16px);
       color: #000000;
@@ -250,7 +284,66 @@ display: none;
       @include g.ph {
         writing-mode:inherit;
       }
+       // テキストアニメーション1
+    .slide-in {
+      overflow: hidden;
+        display: inline-block;
+    }
+    
+    .slide-in_inner {
+      display: inline-block;
+    
+    }
+    
+    /*左右のアニメーション*/
+    .rightAnime{
+        opacity: 0;/*事前に透過0にして消しておく*/
+    }
+    
+    .slideAnimeLeftRight {
+      animation-name:slideTextX100;
+      animation-duration:0.8s;
+      animation-fill-mode:forwards;
+        opacity: 0;
+        animation-delay: 1.6s;
 
+    }
+    
+    @keyframes slideTextX100 {
+      from {
+      transform: translateX(-100%); /*要素を左の枠外に移動*/
+            opacity: 0;
+      }
+    
+      to {
+      transform: translateX(0);/*要素を元の位置に移動*/
+        opacity: 1;
+      }
+    }
+    
+    .slideAnimeRightLeft {
+      animation-name:slideTextX-100;
+      animation-duration:1.6s;
+      animation-fill-mode:forwards;
+        opacity: 0;
+        animation-delay: 1.6s;
+    }
+    
+    
+    @keyframes slideTextX-100 {
+      from {
+      transform: translateX(100%);/*要素を右の枠外に移動*/
+        opacity: 0;
+      }
+    
+      to {
+      transform: translateX(0);/*要素を元の位置に移動*/
+        opacity: 1;
+      }
+    }
+
+    // 右から左に
+      
 
       .one-pen-big-text {
         line-height: 31px;
@@ -268,6 +361,8 @@ display: none;
         line-height: 31px;
       }
     }
+
+  
 
     }
 
@@ -376,7 +471,6 @@ width: 100%;
   margin-top: -80px;
    }
    @include g.phs {
-    margin-top: -120px;  
   }
 }
 .concept-img {
@@ -414,6 +508,8 @@ width: 100%;
 
   @include g.ph {
   width: 100px;
+  margin-top: -8vw;
+
   }
   
 }
@@ -435,8 +531,40 @@ width: 100%;
     color : #152041;
     font-weight: bold;
     font-family: 'TsukuARdGothic-Regular',sans-serif;
+
+    // テキストアニメーション2
+    .blur{
+      animation-name:blurAnime;
+      animation-duration:1s;
+      animation-fill-mode:forwards;
+    }
     
+    @keyframes blurAnime{
+      from {
+      filter: blur(10px);
+      transform: scale(1.02);
+      opacity: 0;
+      }
+    
+      to {
+      filter: blur(0);
+      transform: scale(1);
+      opacity: 1;
+      }
+    }
+     
+    .blurTrigger{
+        opacity: 0;
+    }
+
+        // テキストアニメーション2
+
+
 }
+
+
+
+
 
 }
 // ________________section_________________
@@ -659,25 +787,53 @@ margin-top: 150px;
   }
 
 .w_contact_text {
+  margin-top: 100px;
+  @include g.dk {
+  margin-top: 150px;
+  }
+  @include g.lp {
+    margin-top: 100px;
+    }
   @include g.ph {
   margin-top: 1vw;
 }
 }
+.w_long {
+margin-top: -60px;
+
+.long { 
+  margin-top: 60px;
+  max-width: inherit;
+  @include g.dk {
+    margin-top: 0px;
+  }
+}
+}
 
 .contact_btn {
-  top: 40%;
+  top: 62%;
+  @include g.dk {
+    top: 74%;
+  }
+  @include g.lp {
+    top: 108%;
+    width: fit-content;
+  }
   .w_c {
+    @include g.lp {
+      width: 200px;
+    }
     @include g.ph {
     margin-top: 60px;
     width: 150px;
-
   }
 }
-
+}
+}
 }
 
-}
-}
+
+
 
 
 .sub-footer {
@@ -695,8 +851,8 @@ margin-top: 150px;
 }
 
 
-} // ________________container_________________
-
+// ________________container_________________
+}
 
 
  // ________________responsive_________________
